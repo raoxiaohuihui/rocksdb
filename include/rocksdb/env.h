@@ -32,7 +32,9 @@
 #undef DeleteFile
 #undef GetCurrentTime
 #endif
-
+#ifdef USEOCSSD
+#include "db/OCSSD/Rocksdb/oc_ssd.h"
+#endif
 namespace rocksdb {
 
 class FileLock;
@@ -121,6 +123,9 @@ class Env {
   Env() : thread_status_updater_(nullptr) {}
 
   virtual ~Env();
+#ifdef USEOCSSD
+     Status DefaultSSD(ocssd::oc_ssd **ocssd_ptr);
+#endif
 
   // Return a default environment suitable for the current operating
   // system.  Sophisticated users may wish to provide their own Env
