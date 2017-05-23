@@ -588,6 +588,8 @@ else()
 endif()
 
 set(TESTS
+	db/OCSSD/Rocksdb/oc_page_test.cc
+	db/OCSSD/Rocksdb/oc_test.cc
         cache/cache_test.cc
         cache/lru_cache_test.cc
         db/column_family_test.cc

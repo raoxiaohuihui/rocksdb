@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/shareDir/rocksdb
+CMAKE_SOURCE_DIR = /home/work/mnt/1/OpenChannelSSD/src/rocksdb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/shareDir/rocksdb
+CMAKE_BINARY_DIR = /home/work/mnt/1/OpenChannelSSD/src/rocksdb
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,9 +120,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/shareDir/rocksdb/CMakeFiles /root/shareDir/rocksdb/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/work/mnt/1/OpenChannelSSD/src/rocksdb/CMakeFiles /home/work/mnt/1/OpenChannelSSD/src/rocksdb/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/shareDir/rocksdb/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/work/mnt/1/OpenChannelSSD/src/rocksdb/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1372,6 +1372,32 @@ object_registry_test/fast:
 .PHONY : object_registry_test/fast
 
 #=============================================================================
+# Target rules for targets named oc_page_test
+
+# Build rule for target.
+oc_page_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oc_page_test
+.PHONY : oc_page_test
+
+# fast build rule for target.
+oc_page_test/fast:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/build
+.PHONY : oc_page_test/fast
+
+#=============================================================================
+# Target rules for targets named oc_test
+
+# Build rule for target.
+oc_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oc_test
+.PHONY : oc_test
+
+# fast build rule for target.
+oc_test/fast:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/build
+.PHONY : oc_test/fast
+
+#=============================================================================
 # Target rules for targets named optimistic_transaction_test
 
 # Build rule for target.
@@ -2346,6 +2372,30 @@ db/OCSSD/Rocksdb/oc_page_cache.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/oc_page_cache.cc.s
 .PHONY : db/OCSSD/Rocksdb/oc_page_cache.cc.s
 
+db/OCSSD/Rocksdb/oc_page_test.o: db/OCSSD/Rocksdb/oc_page_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/oc_page_test.cc.o:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.o
+
+db/OCSSD/Rocksdb/oc_page_test.i: db/OCSSD/Rocksdb/oc_page_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/oc_page_test.cc.i:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.i
+
+db/OCSSD/Rocksdb/oc_page_test.s: db/OCSSD/Rocksdb/oc_page_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/oc_page_test.cc.s:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.s
+
 db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o: db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.cc.o
 .PHONY : db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o
 
@@ -2426,6 +2476,30 @@ db/OCSSD/Rocksdb/oc_ssd.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/oc_ssd.cc.s
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/oc_ssd.cc.s
 .PHONY : db/OCSSD/Rocksdb/oc_ssd.cc.s
+
+db/OCSSD/Rocksdb/oc_test.o: db/OCSSD/Rocksdb/oc_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/oc_test.cc.o:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.o
+
+db/OCSSD/Rocksdb/oc_test.i: db/OCSSD/Rocksdb/oc_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/oc_test.cc.i:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.i
+
+db/OCSSD/Rocksdb/oc_test.s: db/OCSSD/Rocksdb/oc_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/oc_test.cc.s:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.s
 
 db/builder.o: db/builder.cc.o
 .PHONY : db/builder.o
@@ -10833,6 +10907,8 @@ help:
 	@echo "... merger_test"
 	@echo "... mock_env_test"
 	@echo "... object_registry_test"
+	@echo "... oc_page_test"
+	@echo "... oc_test"
 	@echo "... optimistic_transaction_test"
 	@echo "... option_change_migration_test"
 	@echo "... options_file_test"
@@ -10922,6 +10998,9 @@ help:
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.o"
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.i"
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.s"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.o"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.i"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.s"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.i"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.s"
@@ -10931,6 +11010,9 @@ help:
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.o"
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.i"
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.s"
+	@echo "... db/OCSSD/Rocksdb/oc_test.o"
+	@echo "... db/OCSSD/Rocksdb/oc_test.i"
+	@echo "... db/OCSSD/Rocksdb/oc_test.s"
 	@echo "... db/builder.o"
 	@echo "... db/builder.i"
 	@echo "... db/builder.s"

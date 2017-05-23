@@ -10,38 +10,14 @@
 namespace rocksdb {
 namespace ocssd {
 
-static void TEST_Pr_pmode(int pmode)
+oc_ssd::oc_ssd() 
+: des_(new oc_ssd_descriptor(oc_options::kDevPath)), 
+dev_(NULL),
+geo_(NULL),
+blkmng_(NULL),
+pgp_(NULL)
 {
-	const char *str;
-	switch (pmode) {
-	case NVM_FLAG_PMODE_SNGL:
-		str = "NVM_FLAG_PMODE_SNGL";break;
-	case NVM_FLAG_PMODE_DUAL:
-		str = "NVM_FLAG_PMODE_DUAL";break;
-	case NVM_FLAG_PMODE_QUAD:
-		str = "NVM_FLAG_PMODE_QUAD";break;
-	default:
-		str = "ERRORPMODE";break;
-	}
-	printf("%s\n", str);
-}
-
-static bool pmode_is_good(int pmode)
-{
-	switch (pmode) {
-		case NVM_FLAG_PMODE_SNGL:
-		case NVM_FLAG_PMODE_DUAL:
-		case NVM_FLAG_PMODE_QUAD:
-			return true;
-		default:
-			return false;
-	}
-}
-
-
-oc_ssd::oc_ssd() : des_(new oc_ssd_descriptor(oc_options::kDevPath)), dev_(NULL)
-{
-	Setup();
+	init();
 	if (s.ok()) {
 		s = oc_block_manager::New_oc_block_manager(this, &blkmng_);
 	}
@@ -54,26 +30,22 @@ oc_ssd::~oc_ssd()
 	Cleanup();
 }
 
-void oc_ssd::Setup()
+void oc_ssd::init()
 {
 	//Open device
 	dev_ = nvm_dev_open(des_->dev_path_.c_str());
 	if (!dev_) {
-		s = Status::IOError("OCSSD Setup dev", strerror(errno));
+		s = Status::IOError("OCSSD Setup device", strerror(errno));
 		return;
 	}
 	//geo
 	geo_ = nvm_dev_get_geo(dev_);
 	if (!geo_) {
-		s = Status::IOError("OCSSD Setup geo", strerror(errno));
+		s = Status::IOError("OCSSD Setup geometry", strerror(errno));
 		return;
 	}
 
-	//plane access mode
-	pmode_ = nvm_dev_get_pmode(dev_);
-	if(!pmode_is_good(pmode_)){	///To be clean - is not necessary ?
-		s = Status::IOError("OCSSD get pmode error");
-	}
+	//TODO: pmode issue - check liblightnvm version
 }
 void oc_ssd::Cleanup()
 {

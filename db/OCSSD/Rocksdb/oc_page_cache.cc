@@ -141,7 +141,7 @@ oc_page_pool::oc_page_pool(const struct nvm_geo *g) : ID_(0), geo_(g), page_size
 {
 }
 
-	rocksdb::Status oc_page_pool::New_page_pool(const struct nvm_geo *g,  oc_page_pool **pptr)
+rocksdb::Status oc_page_pool::New_page_pool(const struct nvm_geo *g,  oc_page_pool **pptr)
 {
 	oc_page_pool *ptr;
 	*pptr = NULL;

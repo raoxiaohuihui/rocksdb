@@ -12,6 +12,8 @@
 #include "liblightnvm.h"
 #include "nvm.h"
 
+#include "utils/common.hpp"
+
 #include <cstddef>
 #include <cstdint>
 #include <rocksdb/status.h>
@@ -25,8 +27,6 @@ class oc_GC;
 
 class oc_block_manager { //allocation is done in a granularity of <Block>
 public:
-
-
 	typedef uint32_t LunAndPlane_t;
 	typedef uint8_t BlkState_t;
 

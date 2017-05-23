@@ -119,7 +119,7 @@ private:
  */
 class oc_buffer {
 public:
-	oc_buffer(oc_page_pool *p) : page_pool_(p), size_(0), active_(NULL) { }
+	oc_buffer(oc_page_pool *p) : active_(NULL), page_pool_(p), size_(0) { }
 	~oc_buffer();
 	void append(const char *data, size_t len);
 	void clear();
@@ -135,9 +135,9 @@ public:
 		return size_;
 	}
 
-	inline std::string toString(){
-		std::string toString(active_->content());
-		return toString;
+	inline std::string toString(){	//return a string copy from the active page's content
+		std::string str(active_->content());
+		return str;
 	}
 
 	rocksdb::Status dump2file();

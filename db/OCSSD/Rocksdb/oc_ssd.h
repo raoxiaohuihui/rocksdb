@@ -11,11 +11,12 @@
 #include "liblightnvm.h"
 #include "nvm.h"
 
+#include "utils/common.hpp"
+
 #include "oc_file.h"
 
 #include <set>
 
-#define BOOL2STR(b) ((b) ? "true" : "false")
 
 namespace rocksdb {
 namespace ocssd {
@@ -25,61 +26,60 @@ class oc_block_manager;
 class oc_GC;
 class oc_page_pool;
 
-class oc_ssd {  //an ocssd device
+/* 
+ * OCSSD device. 
+ * The entrance of OCSSD Impl. 
+ *  
+ * ---------- Refine Note ----------------
+ * 1. use exception to handle error. 
+ * 2. 
+ * ---------- TODO ------------------------
+ */
+
+
+class oc_ssd {  
 public:
 	oc_ssd();
 	~oc_ssd();
-	void Setup();
-	void Cleanup();
-	bool ok()
-	{
-		return s.ok();
-	}
 
-	typedef typename ocssd::oc_file::oc_file_descriptor file_descriptor;
+
 	struct oc_ssd_descriptor {
 		const std::string dev_path_;
-		std::set<file_descriptor *> files_;
-		oc_ssd_descriptor(const char *name) : dev_path_(name)
+		oc_ssd_descriptor(const char *path) : dev_path_(path)
 		{
 		}
 	};
 
-
-	inline const struct nvm_geo *Geo()
-	{
+	inline bool ok() {
+		return s.ok();
+	}
+	inline const struct nvm_geo *Get_geo(){
 		return geo_;
 	}
-
-	inline oc_block_manager* Blkmng()
-	{
+	inline oc_block_manager* Get_Blkmng(){
 		return blkmng_;
 	}
-	inline oc_page_pool* PagePool()
-	{
+	inline oc_page_pool* Get_Pgpool(){
 		return page_pool_;
 	}
 
 	//TESTS
-	oc_block_manager* TEST_Get_BLK_MNG()
-	{
-		return blkmng_;
-	}
 	oc_file* TEST_New_file(const char *fname);
-
-public:
-	rocksdb::Status s;
 
 private:
 	friend class oc_block_manager;
 	friend class oc_GC;
 
+	rocksdb::Status s;
+
+	void init();
+	void deinit();
+
+	struct oc_ssd_descriptor *des_;
 	struct nvm_dev *dev_;
 	const struct nvm_geo *geo_;
-	int pmode_;
-	struct oc_ssd_descriptor *des_;
 	oc_block_manager *blkmng_;
-	oc_page_pool *page_pool_;
+	oc_page_pool *pgp_;
 
 
 	void EncodeTo(struct oc_ssd_descriptor *ocdes, char *buf);
