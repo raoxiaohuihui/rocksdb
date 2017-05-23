@@ -12,6 +12,7 @@
 #include "nvm.h"
 
 #include "utils/common.hpp"
+#include "utils/oc_exception.h"
 
 #include "oc_file.h"
 
@@ -32,23 +33,15 @@ class oc_page_pool;
  *  
  * ---------- Refine Note ----------------
  * 1. use exception to handle error. 
- * 2. 
+ * 2. RAII
  * ---------- TODO ------------------------
  */
 
 
 class oc_ssd {  
 public:
-	oc_ssd();
-	~oc_ssd();
-
-
-	struct oc_ssd_descriptor {
-		const std::string dev_path_;
-		oc_ssd_descriptor(const char *path) : dev_path_(path)
-		{
-		}
-	};
+	oc_ssd() throw (oc_excpetion); 
+	~oc_ssd() throw();
 
 	inline bool ok() {
 		return s.ok();
@@ -63,27 +56,43 @@ public:
 		return page_pool_;
 	}
 
-	//TESTS
-	oc_file* TEST_New_file(const char *fname);
 
 private:
 	friend class oc_block_manager;
 	friend class oc_GC;
 
-	rocksdb::Status s;
+	//wrapper for RAII
+	struct oc_ssd_descriptor 
+	{
+		const std::string dev_path_;
+		struct nvm_dev *dev_;
+		const struct nvm_geo *geo_;
 
-	void init();
-	void deinit();
+		oc_ssd_descriptor(const char *path = oc_options::kDevPath) throw (dev_init_exception)
+		 : dev_path_(path), 
+		 dev_(NULL), 
+		 geo_(NULL)
+		{
+			dev_ = nvm_dev_open(dev_path_.c_str());
+			if (!dev_) {
+				throw dev_init_exception("nvm_dev_open:");
+			}
+
+			geo_ = nvm_dev_get_geo(dev_);
+			if (!geo_) {
+				throw dev_init_exception("nvm_dev_get_geo:");
+			}
+		}
+
+		~oc_ssd_descriptor() throw()
+		{
+			nvm_dev_close(dev_);
+		}
+	};
 
 	struct oc_ssd_descriptor *des_;
-	struct nvm_dev *dev_;
-	const struct nvm_geo *geo_;
 	oc_block_manager *blkmng_;
 	oc_page_pool *pgp_;
-
-
-	void EncodeTo(struct oc_ssd_descriptor *ocdes, char *buf);
-	void DecodeFrom(struct oc_ssd_descriptor *ocdes, char *buf);
 
 	// No copying allowed
 	oc_ssd(const oc_ssd&);
