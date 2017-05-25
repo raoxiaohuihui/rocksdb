@@ -33,7 +33,7 @@ class oc_page_pool;
  *  
  * ---------- Refine Note ----------------
  * 1. use exception to handle error. 
- * 2. RAII
+ * 2. all resource is impl. following RAII rule.
  * ---------- TODO ------------------------
  */
 
@@ -43,16 +43,13 @@ public:
 	oc_ssd() throw (oc_excpetion); 
 	~oc_ssd() throw();
 
-	inline bool ok() {
-		return s.ok();
-	}
 	inline const struct nvm_geo *Get_geo(){
 		return geo_;
 	}
-	inline oc_block_manager* Get_Blkmng(){
+	inline oc_block_manager* Get_blkmng(){
 		return blkmng_;
 	}
-	inline oc_page_pool* Get_Pgpool(){
+	inline oc_page_pool* Get_pgpool(){
 		return page_pool_;
 	}
 
@@ -62,7 +59,7 @@ private:
 	friend class oc_GC;
 
 	//wrapper for RAII
-	struct oc_ssd_descriptor 
+	struct oc_ssd_descriptor
 	{
 		const std::string dev_path_;
 		struct nvm_dev *dev_;

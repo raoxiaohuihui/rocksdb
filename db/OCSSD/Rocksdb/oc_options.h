@@ -14,9 +14,9 @@ typedef enum {
 	kAllIn = 0x01
 }GCPolicy;
 typedef enum {
-	kRoundRobin_Fixed = 0x00,
-	kRoundRobin_Flexible = 0x01
-}AddrAllocPolicy;
+	kFirstFit = 0x00,
+	kBestFit = 0x01
+}ExtentAllocPolicy;
 
 extern const char *kDevPath;
 extern const char *kOCSSDMetaFileNameSuffix;

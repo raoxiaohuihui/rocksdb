@@ -28,17 +28,5 @@ oc_ssd::~oc_ssd()
 }
 
 
-void oc_ssd::EncodeTo(struct oc_ssd_descriptor *ocdes, char *buf)
-{
-	std::string str;
-	PutLengthPrefixedSlice(&str, ocdes->dev_path_);
-	size_t num = ocdes->files_.size();
-}
-void oc_ssd::DecodeFrom(struct oc_ssd_descriptor *ocdes, char *buf)
-{
-
-}
-
-
 } //namespace ocssd
 } //namespace rocksdb
