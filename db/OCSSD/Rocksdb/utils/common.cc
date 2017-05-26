@@ -7,7 +7,7 @@
 namespace rocksdb {
 namespace ocssd {
 
-void TimeStr(std::string& str)
+void StrAppendTime(std::string& str)
 {
 	char buf[32];
 	time_t timep;
@@ -20,6 +20,17 @@ void TimeStr(std::string& str)
 	str.append(buf);
 	ret = snprintf(buf, 32, " %d:%d:%d", p->tm_hour, p->tm_min, p->tm_sec);
 	str.append(buf);
+}
+
+std::string& StrAppendInt(std::string& str, int val)
+{
+	char buf[32];
+	int ret;
+	ret = snprintf(buf, 32, "%d", val);
+	if (ret < 32) {
+		str.append(buf);
+	}
+	return str;
 }
 
 } // namespace ocssd

@@ -11,8 +11,7 @@
 #include "liblightnvm.h"
 #include "nvm.h"
 
-#include "utils/common.hpp"
-#include "utils/oc_exception.h"
+#include "utils/oc_exception.hpp"
 
 #include "oc_file.h"
 
@@ -43,20 +42,21 @@ public:
 	oc_ssd() throw (oc_excpetion); 
 	~oc_ssd() throw();
 
+	inline struct nvm_dev *Get_dev(){
+		return des_->dev_;
+	}
 	inline const struct nvm_geo *Get_geo(){
-		return geo_;
+		return des_->geo_;
 	}
 	inline oc_block_manager* Get_blkmng(){
 		return blkmng_;
 	}
 	inline oc_page_pool* Get_pgpool(){
-		return page_pool_;
+		return pgp_;
 	}
 
 
 private:
-	friend class oc_block_manager;
-	friend class oc_GC;
 
 	//wrapper for RAII
 	struct oc_ssd_descriptor

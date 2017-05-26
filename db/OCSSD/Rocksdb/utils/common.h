@@ -4,9 +4,10 @@ namespace rocksdb {
 namespace ocssd {
 
 #define BOOL2STR(b) ((b) ? "true" : "false")
-void TimeStr(std::string& str);
+void StrAppendTime(std::string& str);
+std::string& StrAppendInt(std::string& str, int val);
 
-}
-}
+} // namespace ocssd
+} // namespace rocksdb
 
 #endif

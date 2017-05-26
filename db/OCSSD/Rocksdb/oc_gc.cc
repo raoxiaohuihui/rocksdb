@@ -35,8 +35,8 @@ namespace rocksdb {
         }
 
 
-        static inline bool valid_lun(int l, const nvm_geo *geo) {
-            return l >= 0 && l < geo->nluns;
+        static inline bool valid_lun(size_t l, const nvm_geo *geo) {
+            return l < geo->nluns;
         }
 
         static inline std::string GCErrMsg(const char *msg1, int lun) {
@@ -75,15 +75,15 @@ namespace rocksdb {
             struct nvm_addr addrs[NVM_NADDR_MAX];
             rocksdb::Status s;
             struct nvm_ret ret;
-            const size_t emit_pl_blks_once_max = NVM_NADDR_MAX / blk_mng->geo_->nplanes;
+            const size_t emit_pl_blks_once_max = NVM_NADDR_MAX / blk_mng->des_->geo_->nplanes;
 #ifdef DEBUG_GC_EraseByLun
             printf("emit_pl_blks_once_max : %zu\n", emit_pl_blks_once_max);
 #endif
-            size_t erased_pl_blks = 0, remained_pl_blks = blk_mng->geo_->nblocks;
+            size_t erased_pl_blks = 0, remained_pl_blks = blk_mng->des_->geo_->nblocks;
             size_t emit_pl_blks_num, emit_blks_num;
             size_t pl_blk_st = 0;
 
-            if (!valid_lun(lun, blk_mng->geo_)) {
+            if (!valid_lun(lun, blk_mng->des_->geo_)) {
                 s = rocksdb::Status::IOError(GCErrMsg("EraseByLun: Invalid Lun:", lun));
                 goto OUT;
             }
@@ -94,13 +94,13 @@ namespace rocksdb {
 #ifdef DEBUG_GC_EraseByLun
                 printf("Erase s:%zu e:%zu r:%zu\n", pl_blk_st, pl_blk_st + emit_pl_blks_num - 1, remained_pl_blks);
 #endif
-                setupaddrs_pl_blks(pl_blk_st, addrs, emit_pl_blks_num, blk_mng->geo_->nplanes);
+                setupaddrs_pl_blks(pl_blk_st, addrs, emit_pl_blks_num, blk_mng->des_->geo_->nplanes);
 
-                emit_blks_num = emit_pl_blks_num * blk_mng->geo_->nplanes;
+                emit_blks_num = emit_pl_blks_num * blk_mng->des_->geo_->nplanes;
 #ifdef DEBUG_GC_EraseByLunX1
                 TEST_Pr_nvm_addrs("Test_for_EraseByLun", addrs, emit_blks_num);
 #endif
-                if (nvm_addr_erase(blk_mng->ssd_->dev_, addrs, emit_blks_num, blk_mng->ssd_->pmode_, &ret)) {
+                if (nvm_addr_erase(blk_mng->des_->ssd_->Get_dev(), addrs, emit_blks_num, NVM_FLAG_PMODE_DUAL, &ret)) {
                     s = rocksdb::Status::IOError(
                             GCErrMsg("EraseByLun, do erase:", lun, pl_blk_st, pl_blk_st + emit_pl_blks_num - 1),
                             strerror(errno));

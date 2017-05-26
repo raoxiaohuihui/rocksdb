@@ -27,33 +27,19 @@ class oc_ssd;
 class oc_GC;
 
 
-class oc_blk_cleaner {
-public:
-	oc_blk_cleaner(bool erase_on_startup, bool bbtcached) throw(blk_cleaner_exception);
-	~oc_blk_cleaner() throw();
-
-	void ReadBadBlockTable() throw(blk_cleaner_exception);
-	void StoreBadBlockTable() throw(blk_cleaner_exception);
-
-	//issue GC request
-
-private:
-	struct nvm_bbt **bbts_;
-	int bbts_length_;
-	int blks_length_;
-};
-
-
 class oc_block_manager { //allocation is done in a granularity of <Block>
 public:
-	oc_block_manager(oc_ssd *ssd) throw(blk_cleaner_exception);
+	typedef int BlkState_t;
+
+	oc_block_manager(oc_ssd *ssd) throw(bbt_operation_not_good, erase_block_not_good);
 	~oc_block_manager() throw();
 
-	void Info(std::string& str);
+	void print_info();
+	void print_bbts(bool pr2file = false);
 
 private:
 
-	typedef int BlkState_t;
+	
 
 	struct oc_blk_mng_descriptor {
 		/* 
@@ -68,7 +54,7 @@ private:
 		/* 
 		 *  Default: kFirstFit
 		 */
-		oc_options::ExtentAllocPolicy policy;
+		oc_options::ExtentAllocPolicy extent_alloc_policy;
 
 		/*
 		 *	Default: true
@@ -84,33 +70,23 @@ private:
 		oc_ssd *const ssd_;
 		const struct nvm_geo *geo_;
 
+		struct nvm_bbt **bbts_;
+		int bbts_length_;
+		int blks_length_;
+
 		oc_blk_mng_descriptor(oc_ssd *ssd) throw();
 		~oc_blk_mng_descriptor() throw();
 	};
 
-
-
-
-	friend class oc_ssd;
 	friend class oc_GC;
 
 	oc_blk_mng_descriptor *des_;
-	oc_blk_cleaner *clnr_;
+	rocksdb::Status s;
 
 
-	void InitClean();
-	void InitBBTs();
-	void FlushBBTs();
-	void Init();
-
-	void Add_blks(size_t blks);
-	void Set_stripe_blks_as(struct StripeDes des, BlkState_t flag);
-
-
-	/*
-	 * oc_block_manager factory function
-	 */
-	static rocksdb::Status New_oc_block_manager(oc_ssd *ssd,  oc_block_manager **oc_blk_mng_ptr);
+	void init_bbts() throw(bbt_operation_not_good);
+	void flush_bbts() throw(bbt_operation_not_good);
+	void erase_on_startup() throw();
 
 };
 

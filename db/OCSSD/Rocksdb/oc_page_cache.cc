@@ -18,22 +18,21 @@ namespace rocksdb {
 namespace ocssd {
 const int kPEntry_Degree = 32; //Must Be 32.
 
-static std::string int2str(int x)
-{
-	char buf[10];
-	sprintf(buf, "%d", x);
-	return std::string(buf);
-}
+
 
 static void buffill(char *buf, int len)
 {
 	for (int i = 0; i < len; i++) {
-		buf[i] = 'a' + (((i << 2) + i & 0x913af) % 26);
+		buf[i] = 'a' + (((i << 2) + (i & 0x913af)) % 26);
 	}
 }
 
 
-oc_page::oc_page(void *mem, int i, oc_page_pool::p_entry *p) : ptr_(mem), ofs_(mem), idx_(i), held_(p)
+oc_page::oc_page(void *mem, int i, oc_page_pool::p_entry *p) 
+:  held_(p), 
+	ptr_(mem), 
+	ofs_(mem), 
+	idx_(i)
 {
 }
 
@@ -92,6 +91,7 @@ static inline int bitmap2str(uint32_t bitmap, char *buf)
 		buf[32 - i - 1] = bitmap & (1 << i) ? '#' : '0';
 	}
 	buf[32] = '\0';
+	return 0;
 }
 
 /*
@@ -194,22 +194,25 @@ void oc_page_pool::TEST_Pr_Usage(const char *title)
 
 void oc_page_pool::TEST_Basic()
 {
+	std::string str;
 	oc_page *ptr[65];
 	rocksdb::Status s;
 	printf("alloc 65 pages-----\n");
 	for (int i = 0; i < 65; i++) {
 		s = this->AllocPage(&(ptr[i]));
 		if (!s.ok()) {
-			printf("alloc page failed: %s!\n", int2str(i).c_str());
+			printf("alloc page failed: %s!\n", StrAppendInt(str, i).c_str());
 			return;
 		}
-		this->TEST_Pr_Usage(int2str(i).c_str());
+		str.clear();
+		this->TEST_Pr_Usage(StrAppendInt(str, i).c_str());
 	}
 
 	printf("dealloc 65 pages-----\n");
 	for (int i = 0; i < 65; i++) {
 		this->DeallocPage(ptr[i]);
-		this->TEST_Pr_Usage(int2str(i).c_str());
+		str.clear();
+		this->TEST_Pr_Usage(StrAppendInt(str, i).c_str());
 	}
 }
 
