@@ -53,6 +53,13 @@ public:
 
 //IO not good
 
+class page_pool_exception : public oc_excpetion {
+public:
+	explicit page_pool_exception(const char* msg) throw()
+		: oc_excpetion(msg, true)
+	{
+	}
+}
 
 } // namespace ocssd
 } // namespace rocksdb

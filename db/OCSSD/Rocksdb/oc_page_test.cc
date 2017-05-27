@@ -68,7 +68,7 @@ int page_test()
 		printf("ocssd construct failed: %s.\n", ssd.s.ToString().c_str()); 
 	}
 	pool = ssd.PagePool();
-	if(!pool->AllocPage(&page).ok()){
+	if (!pool->page_alloc(&page).ok()) {
 		printf("page alloc failed.\n");
 		return -1;
 	}

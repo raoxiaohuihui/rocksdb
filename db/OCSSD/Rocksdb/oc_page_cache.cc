@@ -6,6 +6,8 @@
 #include "util/mutexlock.h"
 #include "util/crc32c.h"
 
+#include "utils/common.h"
+
 #include <cstring>
 #include <cassert>
 #include <cstdint>
@@ -42,115 +44,13 @@ oc_page::~oc_page()
 		free(ptr_);
 	}
 }
-/*
- * usable range: [ofs_, ptr_ + size_)
- */
-size_t oc_page::Append(const char *str, size_t len)
+
+oc_page_pool::oc_page_pool(const struct nvm_geo *g)
+	: ID_(0),
+	  geo_(g),
+	  page_size_(g->page_nbytes),
+	  degree_(kPEntry_Degree)
 {
-	size_t actual = NVM_MIN(Left(), len);
-	memcpy(ofs_, str, actual);
-	ofs_ = reinterpret_cast<void *>(reinterpret_cast<char *>(ofs_) + actual);
-//	assert(size_ >= ofs_ - ptr_);
-	return actual;
-}
-
-void oc_page::clear()
-{
-	ofs_ = ptr_;
-}
-
-void oc_page::TEST_Info()
-{
-	printf("%p %p %zu\n", this->ptr_, this->ofs_, this->size_);
-}
-void oc_page::TEST_Basic()
-{
-	char buf[1024];
-	buffill(buf, 1024);
-	buf[1023] = '\0';
-
-	size_t ret = this->Append(buf, 1023);
-	ret = this->Append(buf, 1023);
-	ret = this->Append(buf, 1023);
-	ret = this->Append(buf, 1023);
-	ret = this->Append(buf, 1024);
-
-	this->TEST_Info();
-	printf("ret: %zu\n", ret);
-	printf("write len : %d\n", 1023 * 5 + 1);
-	printf("actual len: %zu\n", this->content_len());
-	printf("write : [%s] * 5\n", buf);
-	printf("actual: %s\n", this->content());
-	printf("left:   %zu\n", this->Left());
-}
-
-
-static inline int bitmap2str(uint32_t bitmap, char *buf)
-{
-	for (int i = 0; i < 32; i++) {
-		buf[32 - i - 1] = bitmap & (1 << i) ? '#' : '0';
-	}
-	buf[32] = '\0';
-	return 0;
-}
-
-/*
- * gaudent algorithm
- * require 	- only 1 bit of @x is 1. 
- * return 	- the index of this bit.
- * e.g.
- * 0x00000400 --> 10
- */
-static inline int bitmap_ntz32(uint32_t x)
-{
-	int b4, b3, b2, b1, b0;
-	b4 = (x & 0x0000ffff) ? 0 : 16;
-	b3 = (x & 0x00ff00ff) ? 0 : 8;
-	b2 = (x & 0x0f0f0f0f) ? 0 : 4;
-	b1 = (x & 0x33333333) ? 0 : 2;
-	b0 = (x & 0x55555555) ? 0 : 1;
-	return b0 + b1 + b2 + b3 + b4;
-}
-
-/*
- * get an empty slot(bit == 0) to use
- */
-static int bitmap_get_slot(uint32_t bitmap)
-{
-	if (~bitmap == 0) {
-		return -1; //FULL
-	}
-	uint32_t x = bitmap | (bitmap + 1); //first bit 0 ==> 1
-	x = x & (~bitmap);
-
-	return bitmap_ntz32(x);
-}
-
-static inline void bitmap_set(uint32_t *bitmap, int idx)
-{
-	*bitmap = *bitmap | (1 << idx);
-}
-
-static inline void bitmap_unset(uint32_t *bitmap, int idx)
-{
-	*bitmap = *bitmap & (~(1 << idx));
-}
-
-
-oc_page_pool::oc_page_pool(const struct nvm_geo *g) : ID_(0), geo_(g), page_size_(g->page_nbytes)
-{
-}
-
-rocksdb::Status oc_page_pool::New_page_pool(const struct nvm_geo *g,  oc_page_pool **pptr)
-{
-	oc_page_pool *ptr;
-	*pptr = NULL;
-	ptr = new oc_page_pool(g);
-	if (ptr) {
-		*pptr = ptr;
-		return rocksdb::Status::OK();
-	}
-	return rocksdb::Status::IOError("oc_page_pool::New_page_pool failed.");
 }
 
 oc_page_pool::~oc_page_pool()
@@ -160,7 +60,7 @@ oc_page_pool::~oc_page_pool()
 		rocksdb::MutexLock l(&pool_lock_);
 		while (!pool_.empty()) {
 			ptr = pool_.top();
-			Dealloc_p_entry(ptr);
+			dealloc_p_entry(ptr);
 			pool_.pop();
 		}
 	}
@@ -199,7 +99,7 @@ void oc_page_pool::TEST_Basic()
 	rocksdb::Status s;
 	printf("alloc 65 pages-----\n");
 	for (int i = 0; i < 65; i++) {
-		s = this->AllocPage(&(ptr[i]));
+		this->page_alloc(&(ptr[i]));
 		if (!s.ok()) {
 			printf("alloc page failed: %s!\n", StrAppendInt(str, i).c_str());
 			return;
@@ -232,25 +132,27 @@ void oc_page_pool::TEST_Queue()
 	printf("%d\n", ptr->usage_);
 }
 
-oc_page_pool::p_entry* oc_page_pool::Alloc_p_entry()
+oc_page_pool::p_entry* oc_page_pool::alloc_p_entry()
 {
-	int degree = kPEntry_Degree;
-	oc_page_pool::p_entry *ptr = (p_entry *)malloc(sizeof(p_entry) + (degree - 1) * sizeof(oc_page *));
+	oc_page_pool::p_entry *ptr = (p_entry *)malloc(sizeof(p_entry) + (degree_ - 1) * sizeof(oc_page *));
 	if (!ptr) {
-		s = rocksdb::Status::IOError("oc_page_pool::Alloc_p_entry", strerror(errno));
-		return NULL;
+		s = rocksdb::Status::IOError("oc_page_pool::alloc_p_entry");
+		throw page_pool_exception(s.ToString().c_str()); 
 	}
 	ptr->id_ = ID_;
-	ptr->degree_ = degree;
 	ptr->usage_ = 0;
 	ptr->bitmap_ = 0;
-	ID_++;
 
-	for (int i = 0; i < ptr->degree_; i++) {
+	{
+		rocksdb::MutexLock l(&meta_lock_);
+		ID_++;
+	}
+
+	for (int i = 0; i < degree_; i++) {
 		void *mem = nvm_buf_alloc(geo_, page_size_);
 		if (!mem) {
 			s = rocksdb::Status::IOError("oc_page_pool::Alloc_p_entry nvm_buf_alloc", strerror(errno));
-			return NULL;
+			throw page_pool_exception(s.ToString().c_str()); 
 		}
 		ptr->reps[i] = new oc_page(mem, i, ptr);
 		ptr->reps[i]->size_ = page_size_;
@@ -259,73 +161,91 @@ oc_page_pool::p_entry* oc_page_pool::Alloc_p_entry()
 	return ptr;
 }
 
-void oc_page_pool::Dealloc_p_entry(oc_page_pool::p_entry *pe)
+void oc_page_pool::dealloc_p_entry(oc_page_pool::p_entry *pe)
 {
 	if (pe) {
-		for (int i = 0; i < pe->degree_; i++) {
+		for (int i = 0; i < degree_; i++) {
 			delete pe->reps[i];
 		}
 		free(pe);
 	}
 }
 
-	rocksdb::Status oc_page_pool::AllocPage(oc_page **pptr)
+void oc_page_pool::page_alloc(oc_page **pptr) throw(page_pool_exception)
 {
 	oc_page_pool::p_entry *ptr = NULL;
 	int slot = -1;
 	*pptr = NULL;
-	bool need_alloc = true;
+	if (!pool_.empty()) 
+	{
+		{
+			rocksdb::MutexLock l(&pool_lock_);
+			ptr = pool_.top();
+			if (bitmap_is_all_set(ptr->bitmap_)) {
+				ptr = NULL;
+			} else {
+				pool_.pop();
+			}
+		}
+		if (ptr) {
+			rocksdb::MutexLock l(&ptr->bm_lock_); 
+			slot = bitmap_get_slot(ptr->bitmap_);
+		}
+	}
+
+	if (!ptr) {
+		try {
+			ptr = alloc_p_entry();
+		} catch (const page_pool_exception & e) {
+			throw e;
+		} catch (const std::exception & e) {
+			throw e;
+		}
+		slot = 1;
+	}
+	{
+		rocksdb::MutexLock l(&ptr->bm_lock_);
+		bitmap_set(&(ptr->bitmap_), slot);
+	}
+	ptr->usage_++;
 	{
 		rocksdb::MutexLock l(&pool_lock_);
-
-		if (!pool_.empty()) {
-			ptr = pool_.top();
-			slot = bitmap_get_slot(ptr->bitmap_);
-			assert(slot < kPEntry_Degree);
-			if (slot >= 0) {
-				pool_.pop();
-				need_alloc = false;
-			}
-		}
-
-		if (need_alloc) {
-			ptr = Alloc_p_entry();
-			if (!s.ok()) {
-				goto OUT; //TODO - Refine ?
-			}
-			slot = bitmap_get_slot(ptr->bitmap_);
-		}
-
-		assert(slot >= 0 && slot < kPEntry_Degree);
-
-		//ptr is out of the queue. so don't need to LOCK.
-		bitmap_set(&(ptr->bitmap_), slot);
-		ptr->usage_++;
-
 		pool_.push(ptr);
 	}
 	*pptr = ptr->reps[slot];
-
-OUT:
-	return s;
 }
 
 
 /*
  * 
  */
-void oc_page_pool::DeallocPage(oc_page *p)
+void oc_page_pool::page_dealloc(oc_page *p)
 {
+	p->clear();
+
 	{
 		rocksdb::MutexLock l(&pool_lock_);
-		p->clear();
-
-		bitmap_unset(&(p->held_->bitmap_), p->idx_);
+		{
+			rocksdb::MutexLock(&p->held_->bm_lock_);
+			bitmap_unset(&(p->held_->bitmap_), p->idx_);
+		}	
 		p->held_->usage_--;
 		std::make_heap(const_cast<oc_page_pool::p_entry **>(&pool_.top()),
 			const_cast<oc_page_pool::p_entry **>(&pool_.top()) + pool_.size(),
 			p_entry_cmp());
 	}
+}
+
+/*
+ * an oc_page's usable range: [p->ofs_, p->ptr_ + size_)
+ */
+size_t oc_page_pool::page_append(oc_page *p, const char *str, size_t len)
+{
+	size_t actual = NVM_MIN(this->page_leftbytes(p), len); 
+	memcpy(p->ofs_, str, actual);
+	p->ofs_ = reinterpret_cast<void *>(reinterpret_cast<char *>(p->ofs_) + actual);
+//	assert(size_ >= ofs_ - ptr_);
+	return actual;
 }
 
 
@@ -341,7 +261,7 @@ void oc_buffer::append(const char *data, size_t len)
 	int itr = 0;
 	while (wlen < len) {
 		if (active_) {
-			wlen += active_->Append(data + wlen, len - wlen);
+			wlen += page_pool_->page_append(active_, data + wlen, len - wlen); 
 //			printf("[oc_buffer] - len: %zu; has write: %zu; itr: %d\n", len, wlen, itr);
 			if (wlen == len) {
 				size_ += len;
@@ -349,11 +269,10 @@ void oc_buffer::append(const char *data, size_t len)
 			}
 			todump_.push_back(active_);
 		}
-
-		s = page_pool_->AllocPage(&active_);
-		if (!s.ok()) {
-			printf("[oc_buffer] %s\n", s.ToString().c_str());
-			abort();
+		try {
+			page_pool_->page_alloc(&active_);
+		} catch (const page_pool_exception & e) {
+			throw e;
 		}
 		itr++;
 	}
@@ -379,11 +298,12 @@ void oc_buffer::cleanup()
 	for (dump_iterator itr = todump_.begin();
 		itr != todump_.end();
 		++itr) {
-		page_pool_->DeallocPage(*itr);
+		page_pool_->page_dealloc(*itr); 
 	}
 	todump_.clear();
 }
-	rocksdb::Status oc_buffer::dump2file()
+
+rocksdb::Status oc_buffer::dump2file()
 {
 	rocksdb::Status s;
 	oc_page *ptr;
@@ -395,8 +315,8 @@ void oc_buffer::cleanup()
 		++itr) {
 		ptr = *itr;
 		size_t i = 0;
-		while (i < ptr->content_len()) {
-			printf("%c", *(ptr->content() + i));
+		while (i < page_pool_->page_content_len(ptr)) {
+			printf("%c", *(page_pool_->page_content(ptr) + i));
 			i++;
 		}
 	}
@@ -404,13 +324,13 @@ void oc_buffer::cleanup()
 	return s;
 }
 
-	rocksdb::Status oc_buffer::dump2file(oc_file *f)
+rocksdb::Status oc_buffer::dump2file(oc_file *f)
 {
 	rocksdb::Status s;
 	return s;
 }
 
-	rocksdb::Status oc_buffer::dump2file(rocksdb::WritableFile *f)
+rocksdb::Status oc_buffer::dump2file(rocksdb::WritableFile *f)
 {
 	rocksdb::Status s;
 	oc_page *ptr;
@@ -419,7 +339,7 @@ void oc_buffer::cleanup()
 		itr != todump_.end();
 		++itr) {
 		ptr = *itr;
-		s = f->Append(rocksdb::Slice(ptr->content(), ptr->content_len()));
+		s = f->Append(rocksdb::Slice(page_pool_->page_content(ptr), page_pool_->page_content_len(ptr)));
 		if (!s.ok()) {
 			break;
 		}
@@ -439,7 +359,7 @@ void oc_buffer::update_pagesinfo()
 		itr != todump_.end();
 		++itr) {
 		ptr = *itr;
-		snprintf(buf, 200, " id%d(in_used_bytes:%zu),", ptr->idx_, ptr->content_len()); 
+		snprintf(buf, 200, " id%d(in_used_bytes:%zu),", ptr->idx_,  page_pool_->page_content_len(ptr)); 
 		info_.append(buf);
 	}
 	info_.append("\n");
