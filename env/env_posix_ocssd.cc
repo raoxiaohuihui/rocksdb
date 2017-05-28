@@ -932,7 +932,7 @@ std::string Env::GenerateUniqueId() {
            (unsigned long)random_uuid_portion);
   return uuid2;
 }
-    static ocssd::oc_ssd *ssdex;
+static ocssd::oc_ssd *ssdex;
 //
 // Default Posix Env
 //
@@ -949,14 +949,19 @@ Env* Env::Default() {
   // the singletons of ThreadLocalPtr.
   ThreadLocalPtr::InitSingletons();
   static PosixEnv default_env;
-        ssdex = new ocssd::oc_ssd();
+  try {
+	  ssdex = new ocssd::oc_ssd();
+  } catch (const ocssd::oc_excpetion & e) {
+	  throw e; //TODO: will do some other work.
+  } catch (const std::exception & e) {
+	  throw e;
+  }
+  
+
   return &default_env;
 }
-    Status Env::DefaultSSD(ocssd::oc_ssd **ocssd_ptr) {
-        std::cout << "初始化SSD" << std::endl;
-        Status s = ssdex->s;
-        *ocssd_ptr = s.ok() ? ssdex : NULL;
-        return s;
-    }
+ocssd::oc_ssd* Env::DefaultSSD(void) {
+ return ssdex;
+}
 
 }  // namespace rocksdb

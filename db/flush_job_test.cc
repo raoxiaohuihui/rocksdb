@@ -55,12 +55,8 @@ namespace rocksdb {
           std::vector<ColumnFamilyDescriptor> column_families;
           cf_options_.table_factory = mock_table_factory_;
 #ifdef USEOCSSD
-          Status s = env_->DefaultSSD(&ssd_);
-          if (s.ok()) {
-            printf("(In DBImpl)[ocssd] - OCSSD Constructed Good.\n");
-          }else{
-            printf("(In DBImpl)[ocssd] - OCSSD Constructed Error.\n");
-          }
+          ssd_ = env_->DefaultSSD();
+          printf("(In DBImpl)[ocssd] - OCSSD Constructed Good.\n");
 #endif
           column_families.emplace_back(kDefaultColumnFamilyName, cf_options_);
 

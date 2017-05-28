@@ -1,5 +1,8 @@
 #ifndef YWJ_OCSSD_COMMON_H
 #define YWJ_OCSSD_COMMON_H
+
+#include <string>
+
 namespace rocksdb {
 namespace ocssd {
 

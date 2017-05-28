@@ -124,7 +124,7 @@ class Env {
 
   virtual ~Env();
 #ifdef USEOCSSD
-     Status DefaultSSD(ocssd::oc_ssd **ocssd_ptr);
+  ocssd::oc_ssd* DefaultSSD(void);
 #endif
 
   // Return a default environment suitable for the current operating

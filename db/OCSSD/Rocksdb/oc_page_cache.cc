@@ -110,7 +110,7 @@ void oc_page_pool::TEST_Basic()
 
 	printf("dealloc 65 pages-----\n");
 	for (int i = 0; i < 65; i++) {
-		this->DeallocPage(ptr[i]);
+		this->page_dealloc(ptr[i]);
 		str.clear();
 		this->TEST_Pr_Usage(StrAppendInt(str, i).c_str());
 	}
@@ -136,8 +136,8 @@ oc_page_pool::p_entry* oc_page_pool::alloc_p_entry()
 {
 	oc_page_pool::p_entry *ptr = (p_entry *)malloc(sizeof(p_entry) + (degree_ - 1) * sizeof(oc_page *));
 	if (!ptr) {
-		s = rocksdb::Status::IOError("oc_page_pool::alloc_p_entry");
-		throw page_pool_exception(s.ToString().c_str()); 
+		s_ = rocksdb::Status::IOError("oc_page_pool::alloc_p_entry");
+		throw page_pool_exception(s_.ToString().c_str()); 
 	}
 	ptr->id_ = ID_;
 	ptr->usage_ = 0;
@@ -151,11 +151,10 @@ oc_page_pool::p_entry* oc_page_pool::alloc_p_entry()
 	for (int i = 0; i < degree_; i++) {
 		void *mem = nvm_buf_alloc(geo_, page_size_);
 		if (!mem) {
-			s = rocksdb::Status::IOError("oc_page_pool::Alloc_p_entry nvm_buf_alloc", strerror(errno));
-			throw page_pool_exception(s.ToString().c_str()); 
+			s_ = rocksdb::Status::IOError("oc_page_pool::Alloc_p_entry nvm_buf_alloc", strerror(errno));
+			throw page_pool_exception(s_.ToString().c_str()); 
 		}
 		ptr->reps[i] = new oc_page(mem, i, ptr);
-		ptr->reps[i]->size_ = page_size_;
 	}
 
 	return ptr;
@@ -219,9 +218,9 @@ void oc_page_pool::page_alloc(oc_page **pptr) throw(page_pool_exception)
 /*
  * 
  */
-void oc_page_pool::page_dealloc(oc_page *p)
+void oc_page_pool::page_dealloc(oc_page *p) throw()
 {
-	p->clear();
+	this->page_clear(p);
 
 	{
 		rocksdb::MutexLock l(&pool_lock_);
@@ -359,7 +358,7 @@ void oc_buffer::update_pagesinfo()
 		itr != todump_.end();
 		++itr) {
 		ptr = *itr;
-		snprintf(buf, 200, " id%d(in_used_bytes:%zu),", ptr->idx_,  page_pool_->page_content_len(ptr)); 
+		snprintf(buf, 200, " id%d(in_used_bytes:%zu),", ptr->idx_, page_pool_->page_content_len(ptr)); 
 		info_.append(buf);
 	}
 	info_.append("\n");
@@ -498,14 +497,14 @@ uint32_t oc_buffer::CRCValue()
 
 	itr = todump_.begin();
 	ptr = *itr;
-	crc = rocksdb::crc32c::Value(ptr->content(), ptr->content_len());
+	crc = rocksdb::crc32c::Value(page_pool_->page_content(ptr), page_pool_->page_content_len(ptr)); 
 	++itr;
 
 	for (;
 		itr != todump_.end();
 		++itr) {
 		ptr = *itr;
-		crc = rocksdb::crc32c::Extend(crc, ptr->content(), ptr->content_len());
+		crc = rocksdb::crc32c::Extend(crc, page_pool_->page_content(ptr), page_pool_->page_content_len(ptr));
 	}
 	return crc;
 }

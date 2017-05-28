@@ -21,27 +21,8 @@ namespace ocssd {
 
 
 class oc_ssd;
+class oc_page;
 class oc_file;
-
-
-class oc_page {
-private:
-	friend class oc_page_pool;
-	friend class oc_buffer;
-	
-
-	oc_page_pool::p_entry *held_;
-	void*		ptr_;
-	void*		ofs_;
-	int 		idx_;
-
-	oc_page(void *mem, int i, oc_page_pool::p_entry *p);
-	~oc_page();
-
-	//no copy
-	oc_page(oc_page const&);
-	const oc_page operator=(oc_page const&);
-};
 
 
 class oc_page_pool {
@@ -53,22 +34,10 @@ public:
 	void page_alloc(oc_page **pptr) throw(page_pool_exception);
 	void page_dealloc(oc_page *p) throw();
 	size_t page_append(oc_page *p, const char *str, size_t len);
-
-	inline size_t page_leftbytes(oc_page *p){
-		return reinterpret_cast<char *>(p->ptr_) + page_size_ - reinterpret_cast<char *>(p->ofs_);
-	}
-
-	inline size_t page_content_len(oc_page *p){
-		return reinterpret_cast<char *>(p->ofs_) - reinterpret_cast<char *>(p->ptr_);
-	}
-
-	inline const char* page_content(oc_page *p){
-		return reinterpret_cast<const char *>(p->ptr_);
-	}
-
-	inline void page_clear(oc_page *p){
-		p->ofs_ = p->ptr_;
-	}
+	inline size_t page_leftbytes(oc_page *p);
+	inline size_t page_content_len(oc_page *p);
+	inline const char* page_content(oc_page *p);
+	inline void page_clear(oc_page *p);
 
 	//TESTS
 	void TEST_Pr_Usage(const char *title);
@@ -108,8 +77,50 @@ private:
 	const struct nvm_geo *const geo_;
 	const size_t 				page_size_;
 	const int 					degree_;
-	rocksdb::Status 			s;
+	rocksdb::Status 			s_;
 };
+
+
+class oc_page {
+private:
+	friend class oc_page_pool;
+	friend class oc_buffer;
+	
+
+	oc_page_pool::p_entry *held_;
+	void*		ptr_;
+	void*		ofs_;
+	int 		idx_;
+
+	oc_page(void *mem, int i, oc_page_pool::p_entry *p);
+	~oc_page();
+
+	//no copy
+	oc_page(oc_page const&);
+	const oc_page operator=(oc_page const&);
+};
+
+
+inline size_t oc_page_pool::page_leftbytes(oc_page *p)
+{
+	return reinterpret_cast<char *>(p->ptr_) + page_size_ - reinterpret_cast<char *>(p->ofs_);
+}
+
+inline size_t oc_page_pool::page_content_len(oc_page *p)
+{
+	return reinterpret_cast<char *>(p->ofs_) - reinterpret_cast<char *>(p->ptr_);
+}
+
+inline const char* oc_page_pool::page_content(oc_page *p)
+{
+	return reinterpret_cast<const char *>(p->ptr_);
+}
+
+inline void oc_page_pool::page_clear(oc_page *p)
+{
+	p->ofs_ = p->ptr_;
+}
+
 
 /* 
  * a wrapper to oc_page. 
@@ -135,7 +146,7 @@ public:
 	}
 
 	inline std::string toString(){	//return a string copy from the active page's content
-		std::string str(active_->content());
+		std::string str(page_pool_->page_content(active_)); 
 		return str;
 	}
 

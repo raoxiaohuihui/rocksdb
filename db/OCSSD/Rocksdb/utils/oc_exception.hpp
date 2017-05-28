@@ -59,7 +59,7 @@ public:
 		: oc_excpetion(msg, true)
 	{
 	}
-}
+};
 
 } // namespace ocssd
 } // namespace rocksdb
