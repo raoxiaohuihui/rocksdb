@@ -171,37 +171,55 @@ void addr_release();
 
 /*Tree's logic goes here*/
 /*
- * tree draft 
+ * Tree design draft 
  *  
- *  extent:
+ *  1. extent:
  *  |----------------------------|
  *  | addr_st | addr_ed | bitmap |
  *  | 8B      | 8B      | 4B     |
  *  ------------------------------
- *  
+ * 
+ *  LIMITATIONS:
  *  vblk(512B): 1/16 of a block(8M)
  *  smallest_allocation_unit: ext_len * vblk
  *  ext_len_max = 8(the limitation of LUN)
+ *  ext_len is fixed in range {2, 4, 8}
+ *  grain of file allocation: 1KB, 2KB, 4KB
  *  
- *  leaf_node:
- *  |-------------------------|---sorted by address-----------|---sorted by free_vblk_num-----------|
- *  | free_vblk_sum | obj_num | extent | extent |....| extent | meta_obj | meta_obj |....| meta_obj |
- *  | 4B            | 2B      | 20B    |                      | 4B       | 4B                       |
- *  															meta_obj:
- *  															| free_vblk_num | obj_id | null |
- *   															| (for_firstfit)|        | 		|
- *  															| 1B            | 2B     | 1B	|
- *  
+ *  2. leaf_node:
+ *  | ext_len_2_meta_obj_num | free_vblk_sum_2  | 
+ *  | ext_len_4_meta_obj_num | free_vblk_sum_4  |																					
+ *  | ext_len_8_meta_obj_num | free_vblk_sum_8  |
+ *  | 2B                     | 4B               | * 3
+ *  | meta_obj_2 | meta_obj_2 | ... |  meta_obj_2 | meta_obj_4 | meta_obj_4 | ... |  meta_obj_4 | meta_obj_8 | meta_obj_8 | ... |  meta_obj_8 |
+ *  |-------sorted by free_vblk_num---------------|----sorted by free_vblk_num------------------|-------sorted by free_vblk_num---------------|
+ *  |-------ext_len_2_meta_obj_array--------------|----ext_len_4_meta_obj_array-----------------|-------ext_len_8_meta_obj_array--------------|
+ *  | meta_obj_2/4/8:
+ *  | free_vblk_num | obj_id | null |
+ *  | 1B            | 2B     | 1B   |
+ *  |---sorted by address-----------|
+ *  | extent | extent |....| extent |
+ *  | 20B    |                      |
+ *
  *  node_id:4B --> max 2TB meta_file_size
+ *  a tree_node(leaf or non_leaf)'s size is fixed to 512B
+ *  node_id is inner-addressing of a meta_file
  *  
- *  non_leaf_node
- *  |-----------------------------------------------------------------------------------------------|
- *  | free_vblk_sum | obj_num | node_id | node_id |....| node_id | meta_obj | meta_obj |....| meta_obj |
- *  | 4B            | 2B      | 4B      | 4B                     | 4B       | 4B                       |
- *      														meta_obj:
- *  															| free_vblk_num | obj_id |
- *   															| (for_firstfit)|        |
- *  															| 4B            | 2B     |
+ *  3. non_leaf_node:
+ *  | ext_len_2_meta_obj_num | free_vblk_sum_2  | 
+ *  | ext_len_4_meta_obj_num | free_vblk_sum_4  |																					
+ *  | ext_len_8_meta_obj_num | free_vblk_sum_8  |
+ *  | 2B                     | 4B               | * 3
+ *  | meta_obj_2 | meta_obj_2 | ... |  meta_obj_2 | meta_obj_4 | meta_obj_4 | ... |  meta_obj_4 | meta_obj_8 | meta_obj_8 | ... |  meta_obj_8 |
+ *  |-------sorted by free_vblk_num---------------|----sorted by free_vblk_num------------------|-------sorted by free_vblk_num---------------|
+ *  |-------ext_len_2_meta_obj_array--------------|----ext_len_4_meta_obj_array-----------------|-------ext_len_8_meta_obj_array--------------|
+ *  | meta_obj_2/4/8:
+ *  | free_vblk_num | obj_id | null |
+ *  | 1B            | 2B     | 1B   |
+ *  |---sorted by address--------------|
+ *  | node_id | node_id |....| node_id |
+ *  | 4B      | 4B      |....|         |
+ *
  */
 
 
