@@ -23,7 +23,7 @@ namespace addr{
 // @ch is changable
 // @stlun & @nluns is fixed
 // this ext_tree's lun range: [stlun, stlun + nluns - 1]
-struct ext_meta {
+struct tree_meta {
     //fields for address-format 
     size_t ch;
     size_t stlun;
@@ -34,7 +34,7 @@ struct ext_meta {
 
 
 /*
- * Block Address Format: >>>>default
+ * Block Address Format: >>>>>>>>default
  *
  *        |   ch   |  blk   |  pl   |   lun   |
  * length   _l[0]    _l[1]    _l[2]    _l[3]
@@ -70,8 +70,9 @@ struct blk_addr_handle{ // a handle should attach to a tree.
 
 struct config{
 	const struct nvm_geo * geo_;
-	struct ext_meta * extmeta_;
-
+	struct tree_meta * tm_;
+	struct blk_addr_handle * bah_;
+	int tree_num_;
 };
 
 struct config *kConfig;
