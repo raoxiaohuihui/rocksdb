@@ -315,6 +315,7 @@ set(SOURCES
         db/OCSSD/Rocksdb/oc_ssd.cc
         db/OCSSD/Rocksdb/oc_ssd.h
 	db/OCSSD/Rocksdb/utils/common.cc
+	db/OCSSD/Rocksdb/utils/oc_tree.cc
         cache/clock_cache.cc
         cache/lru_cache.cc
         cache/sharded_cache.cc

@@ -2528,6 +2528,33 @@ db/OCSSD/Rocksdb/utils/common.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/common.cc.s
 .PHONY : db/OCSSD/Rocksdb/utils/common.cc.s
 
+db/OCSSD/Rocksdb/utils/oc_tree.o: db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+
+db/OCSSD/Rocksdb/utils/oc_tree.i: db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+
+db/OCSSD/Rocksdb/utils/oc_tree.s: db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+
 db/builder.o: db/builder.cc.o
 .PHONY : db/builder.o
 
@@ -11043,6 +11070,9 @@ help:
 	@echo "... db/OCSSD/Rocksdb/utils/common.o"
 	@echo "... db/OCSSD/Rocksdb/utils/common.i"
 	@echo "... db/OCSSD/Rocksdb/utils/common.s"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.o"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.i"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.s"
 	@echo "... db/builder.o"
 	@echo "... db/builder.i"
 	@echo "... db/builder.s"

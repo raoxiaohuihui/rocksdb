@@ -10,6 +10,39 @@ namespace ocssd {
 void StrAppendTime(std::string& str);
 std::string& StrAppendInt(std::string& str, int val);
 
+// get binary mask of @x
+template<typename XType>
+int GetBinMaskBits(XType x)
+{
+	XType i = 1;
+	int bits = 0;
+	while(i < x){
+		i = i << 1;
+		bits++;
+	}
+	return bits;
+}
+
+// if x is in range of [a, b]
+template<typename XType>
+inline bool InRange(XType x, XType a, XType b)
+{
+	return x >= a && x <= b ? true : false;
+}
+
+template<typename XType>
+const char* BinStr(XType num, std::string& str)
+{
+	XType mask = 1;
+	int binlen = sizeof(num) * 8;
+	binlen--;
+	str.clear();
+	while(binlen >= 0){
+		str.append(1, num & (mask << binlen) ? '1' : '0');
+		binlen--;
+	}
+	return str.c_str();
+}
 
 
 inline int bitmap2str(uint32_t bitmap, char *buf)
