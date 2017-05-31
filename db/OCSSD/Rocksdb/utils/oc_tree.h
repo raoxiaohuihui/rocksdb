@@ -194,32 +194,36 @@ struct leaf_node{
 	uint16_t el_2_mobj_num; 	//ext_len_2_meta_obj_num
 	uint16_t el_8_mobj_num; 
 	uint16_t el_4_mobj_num;
-	uint16_t reserve1;
+	uint16_t el_none_mobj_num;
 
 	uint32_t free_vblk_sum_2;	//free_vblock_number of extent_len = 2
 	uint32_t free_vblk_sum_4;
 	uint32_t free_vblk_sum_8;
-	uint32_t reserve2;
+	uint32_t free_vblk_sum_none;
 
 	struct meta_obj mobjs[Leaf_Node_Degree];
 	struct extent exts[Leaf_Node_Degree];
-	uint32_t reserve3[2];
+	
+	uint32_t reserve3[1];
+	uint32_t node_type;			//0
 }__attribute__((aligned(8)));	//1024B
 
 struct non_leaf_node{
 	uint16_t el_2_mobj_num; 	//ext_len_2_meta_obj_num
 	uint16_t el_8_mobj_num; 
 	uint16_t el_4_mobj_num;
-	uint16_t reserve1;
+	uint16_t el_none_mobj_num;
 
 	uint32_t free_vblk_sum_2;	//free_vblock_number of extent_len = 2
 	uint32_t free_vblk_sum_4;
 	uint32_t free_vblk_sum_8;
-	uint32_t reserve2;
+	uint32_t free_vblk_sum_none;
 
 	struct meta_obj mobjs[Non_Leaf_Node_Degree_Meta];
 	uint32_t node_ids[Non_Leaf_Node_Degree];
-	uint32_t reserve3[4];
+	
+	uint32_t reserve3[3];
+	uint32_t node_type;			//1
 }__attribute__((aligned(8)));	//1024B
 
 
