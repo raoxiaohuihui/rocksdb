@@ -5,6 +5,8 @@
 #include "liblightnvm.h"
 #include "../nvm.h"
 
+#include <stdint.h>
+
 namespace rocksdb {
 namespace ocssd {
 
@@ -170,57 +172,57 @@ void addr_release();
 } // namespace addr
 
 /*Tree's logic goes here*/
-/*
- * Tree design draft 
- *  
- *  1. extent:
- *  |----------------------------|
- *  | addr_st | addr_ed | bitmap |
- *  | 8B      | 8B      | 4B     |
- *  ------------------------------
- * 
- *  LIMITATIONS:
- *  vblk(512B): 1/16 of a block(8M)
- *  smallest_allocation_unit: ext_len * vblk
- *  ext_len_max = 8(the limitation of LUN)
- *  ext_len is fixed in range {2, 4, 8}
- *  grain of file allocation: 1KB, 2KB, 4KB
- *  
- *  2. leaf_node:
- *  | ext_len_2_meta_obj_num | free_vblk_sum_2  | 
- *  | ext_len_4_meta_obj_num | free_vblk_sum_4  |																					
- *  | ext_len_8_meta_obj_num | free_vblk_sum_8  |
- *  | 2B                     | 4B               | * 3
- *  | meta_obj_2 | meta_obj_2 | ... |  meta_obj_2 | meta_obj_4 | meta_obj_4 | ... |  meta_obj_4 | meta_obj_8 | meta_obj_8 | ... |  meta_obj_8 |
- *  |-------sorted by free_vblk_num---------------|----sorted by free_vblk_num------------------|-------sorted by free_vblk_num---------------|
- *  |-------ext_len_2_meta_obj_array--------------|----ext_len_4_meta_obj_array-----------------|-------ext_len_8_meta_obj_array--------------|
- *  | meta_obj_2/4/8:
- *  | free_vblk_num | obj_id | null |
- *  | 1B            | 2B     | 1B   |
- *  |---sorted by address-----------|
- *  | extent | extent |....| extent |
- *  | 20B    |                      |
- *
- *  node_id:4B --> max 2TB meta_file_size
- *  a tree_node(leaf or non_leaf)'s size is fixed to 512B
- *  node_id is inner-addressing of a meta_file
- *  
- *  3. non_leaf_node:
- *  | ext_len_2_meta_obj_num | free_vblk_sum_2  | 
- *  | ext_len_4_meta_obj_num | free_vblk_sum_4  |																					
- *  | ext_len_8_meta_obj_num | free_vblk_sum_8  |
- *  | 2B                     | 4B               | * 3
- *  | meta_obj_2 | meta_obj_2 | ... |  meta_obj_2 | meta_obj_4 | meta_obj_4 | ... |  meta_obj_4 | meta_obj_8 | meta_obj_8 | ... |  meta_obj_8 |
- *  |-------sorted by free_vblk_num---------------|----sorted by free_vblk_num------------------|-------sorted by free_vblk_num---------------|
- *  |-------ext_len_2_meta_obj_array--------------|----ext_len_4_meta_obj_array-----------------|-------ext_len_8_meta_obj_array--------------|
- *  | meta_obj_2/4/8:
- *  | free_vblk_num | obj_id | null |
- *  | 1B            | 2B     | 1B   |
- *  |---sorted by address--------------|
- *  | node_id | node_id |....| node_id |
- *  | 4B      | 4B      |....|         |
- *
- */
+struct extent{
+	uint64_t addr_st_buf;
+	uint64_t addr_ed_buf;
+	uint32_t free_bitmap;
+	uint32_t junk_bitmap;
+}__attribute__((aligned(8)));		//24B
+
+struct meta_obj{
+	uint32_t free_vblk_num;
+	uint16_t obj_id;
+	uint16_t reserve;
+}__attribute__((aligned(8)));		//8B
+
+
+#define Leaf_Node_Degree 31
+#define Non_Leaf_Node_Degree 35
+#define Non_Leaf_Node_Degree_Meta 105 //MUST be {3 * NONLeaf_Node_Degree}
+
+struct leaf_node{
+	uint16_t el_2_mobj_num; 	//ext_len_2_meta_obj_num
+	uint16_t el_8_mobj_num; 
+	uint16_t el_4_mobj_num;
+	uint16_t reserve1;
+
+	uint32_t free_vblk_sum_2;	//free_vblock_number of extent_len = 2
+	uint32_t free_vblk_sum_4;
+	uint32_t free_vblk_sum_8;
+	uint32_t reserve2;
+
+	struct meta_obj mobjs[Leaf_Node_Degree];
+	struct extent exts[Leaf_Node_Degree];
+	uint32_t reserve3[2];
+}__attribute__((aligned(8)));	//1024B
+
+struct non_leaf_node{
+	uint16_t el_2_mobj_num; 	//ext_len_2_meta_obj_num
+	uint16_t el_8_mobj_num; 
+	uint16_t el_4_mobj_num;
+	uint16_t reserve1;
+
+	uint32_t free_vblk_sum_2;	//free_vblock_number of extent_len = 2
+	uint32_t free_vblk_sum_4;
+	uint32_t free_vblk_sum_8;
+	uint32_t reserve2;
+
+	struct meta_obj mobjs[Non_Leaf_Node_Degree_Meta];
+	uint32_t node_ids[Non_Leaf_Node_Degree];
+	uint32_t reserve3[4];
+}__attribute__((aligned(8)));	//1024B
+
+
 
 
 

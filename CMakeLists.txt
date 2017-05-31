@@ -590,6 +590,7 @@ else()
 endif()
 
 set(TESTS
+	db/OCSSD/Rocksdb/utils/tree_test.cc
 	db/OCSSD/Rocksdb/oc_page_test.cc
 	db/OCSSD/Rocksdb/oc_test.cc
         cache/cache_test.cc

@@ -1801,6 +1801,19 @@ transaction_test/fast:
 .PHONY : transaction_test/fast
 
 #=============================================================================
+# Target rules for targets named tree_test
+
+# Build rule for target.
+tree_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tree_test
+.PHONY : tree_test
+
+# fast build rule for target.
+tree_test/fast:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/build
+.PHONY : tree_test/fast
+
+#=============================================================================
 # Target rules for targets named ttl_test
 
 # Build rule for target.
@@ -2554,6 +2567,30 @@ db/OCSSD/Rocksdb/utils/oc_tree.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
 .PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+
+db/OCSSD/Rocksdb/utils/tree_test.o: db/OCSSD/Rocksdb/utils/tree_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/tree_test.cc.o:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.o
+
+db/OCSSD/Rocksdb/utils/tree_test.i: db/OCSSD/Rocksdb/utils/tree_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/tree_test.cc.i:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.i
+
+db/OCSSD/Rocksdb/utils/tree_test.s: db/OCSSD/Rocksdb/utils/tree_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/tree_test.cc.s:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.s
 
 db/builder.o: db/builder.cc.o
 .PHONY : db/builder.o
@@ -10996,6 +11033,7 @@ help:
 	@echo "... thread_list_test"
 	@echo "... thread_local_test"
 	@echo "... transaction_test"
+	@echo "... tree_test"
 	@echo "... ttl_test"
 	@echo "... version_builder_test"
 	@echo "... version_edit_test"
@@ -11073,6 +11111,9 @@ help:
 	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.o"
 	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.i"
 	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.s"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.o"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.i"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.s"
 	@echo "... db/builder.o"
 	@echo "... db/builder.i"
 	@echo "... db/builder.s"
