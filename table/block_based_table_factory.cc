@@ -17,7 +17,11 @@
 #include "port/port.h"
 #include "rocksdb/flush_block_policy.h"
 #include "rocksdb/cache.h"
+#ifdef USEOCSSD
+#include "db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.h"
+#else
 #include "table/block_based_table_builder.h"
+#endif
 #include "table/block_based_table_reader.h"
 #include "table/format.h"
 
