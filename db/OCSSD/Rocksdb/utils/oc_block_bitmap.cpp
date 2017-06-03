@@ -4,12 +4,15 @@
 
 #include <iostream>
 #include "oc_block_bitmap.h"
-#include ""
+
 namespace rocksdb {
 namespace ocssd {
 
 oc_block_bitmap::oc_block_bitmap(struct nvm_geo const *geo) : geo_(geo) {
   blockBitmap = new Bitmap[geo->nplanes];
+
+}
+oc_block_bitmap::oc_block_bitmap() {
 
 }
 oc_block_bitmap::~oc_block_bitmap() {
@@ -31,7 +34,7 @@ void oc_block_bitmap::printBitmap(int index) {
   std::cout << blockBitmap[index].to_string() << std::endl;
 }
 size_t *oc_block_bitmap::AllocationBlock(size_t blockNums) {
-  size_t blocksAndPlane[blockNums + 1];
+  size_t *blocksAndPlane = new size_t[blockNums + 1];
   int i = 0;
   for (; i < geo_->nplanes; ++i) {
     if (!IsFull(i)) {
@@ -45,6 +48,13 @@ size_t *oc_block_bitmap::AllocationBlock(size_t blockNums) {
   blocksAndPlane[blockNums] = (size_t) i;
   return blocksAndPlane;
 }
+void oc_block_bitmap::setGeo_(const nvm_geo *geo_) {
+  oc_block_bitmap::geo_ = geo_;
+}
+void oc_block_bitmap::setBlockBitmap(Bitmap *blockBitmap) {
+  oc_block_bitmap::blockBitmap = blockBitmap;
+}
+
 }
 }
 

@@ -14,11 +14,14 @@ typedef std::bitset<1020> Bitmap;
 class oc_block_bitmap {
  public:
   oc_block_bitmap(struct nvm_geo const * geo);
+  oc_block_bitmap();
   virtual ~oc_block_bitmap();
   size_t findFreedBlock(int index);
   void BlockBitmapUnset(int index1, int index2);
   void BlockBitmapSet(int index1, size_t index2);
   bool IsFull(int index);
+  void setGeo_(const nvm_geo *geo_);
+  void setBlockBitmap(Bitmap *blockBitmap);
   void printBitmap(int index);
   size_t *AllocationBlock(size_t blockNums);
  private:
