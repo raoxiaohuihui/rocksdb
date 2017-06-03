@@ -1357,70 +1357,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="event_logger_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/event_logger_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 event_logger_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="event_logger_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/event_logger_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 event_logger_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="options_util_test">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/options_util_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -1613,8 +1549,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="db_test2">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test2" prefix_auto="0" extension_auto="0"/>
+			<Target title="sst_dump_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/sst_dump_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1639,14 +1575,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test2"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 sst_dump_test"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="db_test2/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test2" prefix_auto="0" extension_auto="0"/>
+			<Target title="sst_dump_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/sst_dump_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1671,263 +1607,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="merge_helper_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/merge_helper_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 merge_helper_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="merge_helper_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/merge_helper_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 merge_helper_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="compact_files_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compact_files_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compact_files_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="compact_files_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compact_files_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compact_files_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="prefix_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/prefix_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 prefix_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="prefix_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/prefix_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 prefix_test/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 sst_dump_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -2263,6 +1943,198 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="write_batch_with_index_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/write_batch_with_index_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_with_index_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="write_batch_with_index_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/write_batch_with_index_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_with_index_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arena_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="arena_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_set_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="version_set_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="db_iter_test">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_iter_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -2514,6 +2386,198 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_dynamic_level_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spatial_db_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/spatial_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 spatial_db_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spatial_db_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/spatial_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 spatial_db_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="auto_roll_logger_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/auto_roll_logger_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 auto_roll_logger_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="auto_roll_logger_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/auto_roll_logger_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 auto_roll_logger_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oc_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/oc_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 oc_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oc_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/oc_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 oc_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -2962,6 +3026,456 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 dbformat_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cuckoo_table_db_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/cuckoo_table_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 cuckoo_table_db_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cuckoo_table_db_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/cuckoo_table_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 cuckoo_table_db_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_tailing_iter_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_tailing_iter_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_tailing_iter_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_tailing_iter_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_tailing_iter_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_tailing_iter_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bloom_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bloom_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_wal_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_wal_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_wal_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_wal_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_wal_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_wal_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="comparator_db_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/comparator_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 comparator_db_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="comparator_db_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/comparator_db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 comparator_db_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compaction_iterator_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_iterator_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_iterator_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compaction_iterator_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_iterator_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_iterator_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_version">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/CMakeFiles/build_version.dir/build_version.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/util"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 build_version"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_version/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/CMakeFiles/build_version.dir/build_version.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/util"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 build_version/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -3425,8 +3939,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="compaction_iterator_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_iterator_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="corruption_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -3451,14 +3965,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_iterator_test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="compaction_iterator_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_iterator_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="corruption_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -3483,17 +3997,17 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_iterator_test/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="build_version">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/CMakeFiles/build_version.dir/build_version.objlib" prefix_auto="0" extension_auto="0"/>
+			<Target title="options_file_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/options_file_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOS_LINUX"/>
@@ -3502,7 +4016,6 @@
 					<Add option="-DUSEOCSSD"/>
 					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
 					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/util"/>
 					<Add directory="/home/raohui/shareDir/rocksdb"/>
 					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
 					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
@@ -3516,17 +4029,17 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 build_version"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 options_file_test"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="build_version/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/CMakeFiles/build_version.dir/build_version.objlib" prefix_auto="0" extension_auto="0"/>
+			<Target title="options_file_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/options_file_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DOS_LINUX"/>
@@ -3535,7 +4048,6 @@
 					<Add option="-DUSEOCSSD"/>
 					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
 					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/util"/>
 					<Add directory="/home/raohui/shareDir/rocksdb"/>
 					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
 					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
@@ -3549,7 +4061,263 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 build_version/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 options_file_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memtablerep_bench">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/memtablerep_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 memtablerep_bench"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memtablerep_bench/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/memtablerep_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 memtablerep_bench/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compact_files_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compact_files_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compact_files_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compact_files_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compact_files_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compact_files_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prefix_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/prefix_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 prefix_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prefix_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/prefix_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 prefix_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -3811,70 +4579,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="db_universal_compaction_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_universal_compaction_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_universal_compaction_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_universal_compaction_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_universal_compaction_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_universal_compaction_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="persistent_cache_test">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/persistent_cache_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -4062,6 +4766,70 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_merge_operator_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_universal_compaction_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_universal_compaction_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_universal_compaction_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_universal_compaction_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_universal_compaction_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_universal_compaction_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -4323,198 +5091,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="memtablerep_bench">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/memtablerep_bench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 memtablerep_bench"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="memtablerep_bench/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/memtablerep_bench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 memtablerep_bench/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="corruption_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="corruption_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/corruption_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 corruption_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="options_file_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/options_file_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 options_file_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="options_file_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/options_file_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 options_file_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="column_aware_encoding_exp">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/column_aware_encoding_exp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -4702,6 +5278,134 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 options_settable_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="event_logger_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/event_logger_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 event_logger_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="event_logger_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/event_logger_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 event_logger_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/tree_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/tree_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -5091,8 +5795,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="spatial_db_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/spatial_db_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="db_test2">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -5117,14 +5821,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 spatial_db_test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test2"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="spatial_db_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/spatial_db_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="db_test2/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_test2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -5149,14 +5853,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 spatial_db_test/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_test2/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="auto_roll_logger_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/auto_roll_logger_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="merge_helper_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/merge_helper_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -5181,14 +5885,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 auto_roll_logger_test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 merge_helper_test"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="auto_roll_logger_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/auto_roll_logger_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="merge_helper_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/merge_helper_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -5213,391 +5917,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 auto_roll_logger_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="cuckoo_table_db_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/cuckoo_table_db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 cuckoo_table_db_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="cuckoo_table_db_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/cuckoo_table_db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 cuckoo_table_db_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_tailing_iter_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_tailing_iter_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_tailing_iter_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_tailing_iter_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_tailing_iter_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_tailing_iter_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="bloom_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="bloom_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/bloom_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 bloom_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_wal_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_wal_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_wal_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_wal_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_wal_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_wal_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="comparator_db_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/comparator_db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 comparator_db_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="comparator_db_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/comparator_db_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 comparator_db_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_bench">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="db_bench/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 merge_helper_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -5662,6 +5982,70 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_picker_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_bench">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="db_bench/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_bench" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_bench/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -5854,70 +6238,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 fault_injection_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sst_dump_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/sst_dump_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 sst_dump_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sst_dump_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/sst_dump_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 sst_dump_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -6435,70 +6755,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="compaction_job_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_job_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_job_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="compaction_job_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_job_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_job_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="db_io_failure_test">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/db_io_failure_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -6558,6 +6814,70 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 db_io_failure_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compaction_job_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_job_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_job_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compaction_job_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/compaction_job_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 compaction_job_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -7907,6 +8227,70 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="oc_page_test">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/oc_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 oc_page_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="oc_page_test/fast">
+				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/oc_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DOS_LINUX"/>
+					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
+					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
+					<Add option="-DUSEOCSSD"/>
+					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
+					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
+					<Add directory="/home/raohui/shareDir/rocksdb"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
+					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 oc_page_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="block_test">
 				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/block_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
@@ -8414,198 +8798,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 full_filter_block_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="write_batch_with_index_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/write_batch_with_index_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_with_index_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="write_batch_with_index_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/write_batch_with_index_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 write_batch_with_index_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="version_set_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="version_set_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/version_set_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 version_set_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="arena_test">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="arena_test/fast">
-				<Option output="/home/raohui/shareDir/rocksdb/cmake-build-debug/arena_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/raohui/shareDir/rocksdb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DOS_LINUX"/>
-					<Add option="-DROCKSDB_PLATFORM_POSIX"/>
-					<Add option="-DROCKSDB_LIB_IO_POSIX"/>
-					<Add option="-DUSEOCSSD"/>
-					<Add option="-DROCKSDB_FALLOCATE_PRESENT"/>
-					<Add option="-DROCKSDB_MALLOC_USABLE_SIZE"/>
-					<Add directory="/home/raohui/shareDir/rocksdb"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/include"/>
-					<Add directory="/home/raohui/shareDir/rocksdb/third-party/gtest-1.7.0/fused-src"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 arena_test/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raohui/shareDir/rocksdb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -9265,24 +9457,25 @@
 			<Option target="blob_db_test"/>
 			<Option target="filelock_test"/>
 			<Option target="file_reader_writer_test"/>
-			<Option target="event_logger_test"/>
 			<Option target="options_util_test"/>
 			<Option target="crc32c_test"/>
 			<Option target="coding_test"/>
-			<Option target="db_test2"/>
-			<Option target="merge_helper_test"/>
-			<Option target="db_test"/>
-			<Option target="compact_files_test"/>
-			<Option target="prefix_test"/>
+			<Option target="sst_dump_test"/>
 			<Option target="db_sst_test"/>
 			<Option target="db_bloom_filter_test"/>
 			<Option target="thread_list_test"/>
 			<Option target="log_test"/>
 			<Option target="db_log_iter_test"/>
+			<Option target="write_batch_with_index_test"/>
+			<Option target="arena_test"/>
+			<Option target="version_set_test"/>
 			<Option target="db_iter_test"/>
 			<Option target="db_inplace_update_test"/>
 			<Option target="db_flush_test"/>
 			<Option target="db_dynamic_level_test"/>
+			<Option target="spatial_db_test"/>
+			<Option target="auto_roll_logger_test"/>
+			<Option target="oc_test"/>
 			<Option target="env_basic_test"/>
 			<Option target="db_memtable_test"/>
 			<Option target="db_compaction_filter_test"/>
@@ -9290,47 +9483,51 @@
 			<Option target="stringappend_test"/>
 			<Option target="autovector_test"/>
 			<Option target="dbformat_test"/>
-			<Option target="dynamic_bloom_test"/>
-			<Option target="hash_table_bench"/>
-			<Option target="plain_table_db_test"/>
-			<Option target="table_reader_bench"/>
-			<Option target="thread_local_test"/>
-			<Option target="compaction_iterator_test"/>
-			<Option target="db_table_properties_test"/>
-			<Option target="compaction_job_stats_test"/>
-			<Option target="cache_bench"/>
-			<Option target="table_properties_collector_test"/>
-			<Option target="db_universal_compaction_test"/>
-			<Option target="persistent_cache_test"/>
-			<Option target="db_basic_test"/>
-			<Option target="db_merge_operator_test"/>
-			<Option target="delete_scheduler_test"/>
-			<Option target="db_range_del_test"/>
-			<Option target="db_properties_test"/>
-			<Option target="memtablerep_bench"/>
-			<Option target="corruption_test"/>
-			<Option target="options_file_test"/>
-			<Option target="column_aware_encoding_exp"/>
-			<Option target="db_block_cache_test"/>
-			<Option target="options_settable_test"/>
-			<Option target="db_options_test"/>
-			<Option target="ldb_cmd_test"/>
-			<Option target="column_family_test"/>
-			<Option target="rate_limiter_test"/>
-			<Option target="lru_cache_test"/>
-			<Option target="spatial_db_test"/>
-			<Option target="auto_roll_logger_test"/>
 			<Option target="cuckoo_table_db_test"/>
 			<Option target="db_tailing_iter_test"/>
 			<Option target="bloom_test"/>
 			<Option target="db_wal_test"/>
 			<Option target="comparator_db_test"/>
-			<Option target="db_bench"/>
+			<Option target="compaction_iterator_test"/>
+			<Option target="dynamic_bloom_test"/>
+			<Option target="hash_table_bench"/>
+			<Option target="plain_table_db_test"/>
+			<Option target="table_reader_bench"/>
+			<Option target="thread_local_test"/>
+			<Option target="corruption_test"/>
+			<Option target="options_file_test"/>
+			<Option target="memtablerep_bench"/>
+			<Option target="compact_files_test"/>
+			<Option target="db_test"/>
+			<Option target="prefix_test"/>
+			<Option target="db_table_properties_test"/>
+			<Option target="compaction_job_stats_test"/>
+			<Option target="cache_bench"/>
+			<Option target="table_properties_collector_test"/>
+			<Option target="persistent_cache_test"/>
+			<Option target="db_basic_test"/>
+			<Option target="db_merge_operator_test"/>
+			<Option target="db_universal_compaction_test"/>
+			<Option target="delete_scheduler_test"/>
+			<Option target="db_range_del_test"/>
+			<Option target="db_properties_test"/>
+			<Option target="column_aware_encoding_exp"/>
+			<Option target="db_block_cache_test"/>
+			<Option target="options_settable_test"/>
+			<Option target="event_logger_test"/>
+			<Option target="tree_test"/>
+			<Option target="db_options_test"/>
+			<Option target="ldb_cmd_test"/>
+			<Option target="column_family_test"/>
+			<Option target="rate_limiter_test"/>
+			<Option target="lru_cache_test"/>
+			<Option target="db_test2"/>
+			<Option target="merge_helper_test"/>
 			<Option target="compaction_picker_test"/>
+			<Option target="db_bench"/>
 			<Option target="deletefile_test"/>
 			<Option target="external_sst_file_basic_test"/>
 			<Option target="fault_injection_test"/>
-			<Option target="sst_dump_test"/>
 			<Option target="file_indexer_test"/>
 			<Option target="hash_table_test"/>
 			<Option target="filename_test"/>
@@ -9339,8 +9536,8 @@
 			<Option target="flush_job_test"/>
 			<Option target="db_compaction_test"/>
 			<Option target="listener_test"/>
-			<Option target="compaction_job_test"/>
 			<Option target="db_io_failure_test"/>
+			<Option target="compaction_job_test"/>
 			<Option target="manual_compaction_test"/>
 			<Option target="memtable_list_test"/>
 			<Option target="perf_context_test"/>
@@ -9362,6 +9559,7 @@
 			<Option target="iostats_context_test"/>
 			<Option target="reduce_levels_test"/>
 			<Option target="statistics_test"/>
+			<Option target="oc_page_test"/>
 			<Option target="block_test"/>
 			<Option target="options_test"/>
 			<Option target="merger_test"/>
@@ -9370,9 +9568,6 @@
 			<Option target="cuckoo_table_reader_test"/>
 			<Option target="merge_test"/>
 			<Option target="full_filter_block_test"/>
-			<Option target="write_batch_with_index_test"/>
-			<Option target="version_set_test"/>
-			<Option target="arena_test"/>
 		</Unit>
 		<Unit filename="/home/raohui/shareDir/rocksdb/cmake-build-debug/build_version.cc">
 			<Option target="build_version"/>
@@ -9425,6 +9620,9 @@
 			<Option target="rocksdb"/>
 			<Option target="rocksdb-shared"/>
 		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/oc_page_test.cc">
+			<Option target="oc_page_test"/>
+		</Unit>
 		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.cc">
 			<Option target="rocksdb"/>
 			<Option target="rocksdb-shared"/>
@@ -9448,6 +9646,48 @@
 		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/oc_ssd.h">
 			<Option target="rocksdb"/>
 			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/oc_test.cc">
+			<Option target="oc_test"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/bitmap_test.cpp">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/common.cc">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/common.h">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_block_bitmap.h">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.h">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_tree.cc">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/oc_tree.h">
+			<Option target="rocksdb"/>
+			<Option target="rocksdb-shared"/>
+		</Unit>
+		<Unit filename="/home/raohui/shareDir/rocksdb/db/OCSSD/Rocksdb/utils/tree_test.cc">
+			<Option target="tree_test"/>
 		</Unit>
 		<Unit filename="/home/raohui/shareDir/rocksdb/db/builder.cc">
 			<Option target="rocksdb"/>
@@ -10009,7 +10249,7 @@
 			<Option target="rocksdb"/>
 			<Option target="rocksdb-shared"/>
 		</Unit>
-		<Unit filename="/home/raohui/shareDir/rocksdb/env/env_posix.cc">
+		<Unit filename="/home/raohui/shareDir/rocksdb/env/env_posix_ocssd.cc">
 			<Option target="rocksdb"/>
 			<Option target="rocksdb-shared"/>
 		</Unit>
@@ -10258,14 +10498,6 @@
 		</Unit>
 		<Unit filename="/home/raohui/shareDir/rocksdb/table/block_based_filter_block_test.cc">
 			<Option target="block_based_filter_block_test"/>
-		</Unit>
-		<Unit filename="/home/raohui/shareDir/rocksdb/table/block_based_table_builder.cc">
-			<Option target="rocksdb"/>
-			<Option target="rocksdb-shared"/>
-		</Unit>
-		<Unit filename="/home/raohui/shareDir/rocksdb/table/block_based_table_builder.h">
-			<Option target="rocksdb"/>
-			<Option target="rocksdb-shared"/>
 		</Unit>
 		<Unit filename="/home/raohui/shareDir/rocksdb/table/block_based_table_factory.cc">
 			<Option target="rocksdb"/>

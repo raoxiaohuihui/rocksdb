@@ -426,19 +426,6 @@ file_reader_writer_test/fast:
 .PHONY : file_reader_writer_test/fast
 
 #=============================================================================
-# Target rules for targets named event_logger_test
-
-# Build rule for target.
-event_logger_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 event_logger_test
-.PHONY : event_logger_test
-
-# fast build rule for target.
-event_logger_test/fast:
-	$(MAKE) -f CMakeFiles/event_logger_test.dir/build.make CMakeFiles/event_logger_test.dir/build
-.PHONY : event_logger_test/fast
-
-#=============================================================================
 # Target rules for targets named options_util_test
 
 # Build rule for target.
@@ -478,69 +465,17 @@ coding_test/fast:
 .PHONY : coding_test/fast
 
 #=============================================================================
-# Target rules for targets named db_test2
+# Target rules for targets named sst_dump_test
 
 # Build rule for target.
-db_test2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_test2
-.PHONY : db_test2
+sst_dump_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sst_dump_test
+.PHONY : sst_dump_test
 
 # fast build rule for target.
-db_test2/fast:
-	$(MAKE) -f CMakeFiles/db_test2.dir/build.make CMakeFiles/db_test2.dir/build
-.PHONY : db_test2/fast
-
-#=============================================================================
-# Target rules for targets named merge_helper_test
-
-# Build rule for target.
-merge_helper_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 merge_helper_test
-.PHONY : merge_helper_test
-
-# fast build rule for target.
-merge_helper_test/fast:
-	$(MAKE) -f CMakeFiles/merge_helper_test.dir/build.make CMakeFiles/merge_helper_test.dir/build
-.PHONY : merge_helper_test/fast
-
-#=============================================================================
-# Target rules for targets named db_test
-
-# Build rule for target.
-db_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_test
-.PHONY : db_test
-
-# fast build rule for target.
-db_test/fast:
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/build
-.PHONY : db_test/fast
-
-#=============================================================================
-# Target rules for targets named compact_files_test
-
-# Build rule for target.
-compact_files_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 compact_files_test
-.PHONY : compact_files_test
-
-# fast build rule for target.
-compact_files_test/fast:
-	$(MAKE) -f CMakeFiles/compact_files_test.dir/build.make CMakeFiles/compact_files_test.dir/build
-.PHONY : compact_files_test/fast
-
-#=============================================================================
-# Target rules for targets named prefix_test
-
-# Build rule for target.
-prefix_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 prefix_test
-.PHONY : prefix_test
-
-# fast build rule for target.
-prefix_test/fast:
-	$(MAKE) -f CMakeFiles/prefix_test.dir/build.make CMakeFiles/prefix_test.dir/build
-.PHONY : prefix_test/fast
+sst_dump_test/fast:
+	$(MAKE) -f CMakeFiles/sst_dump_test.dir/build.make CMakeFiles/sst_dump_test.dir/build
+.PHONY : sst_dump_test/fast
 
 #=============================================================================
 # Target rules for targets named db_sst_test
@@ -608,6 +543,45 @@ db_log_iter_test/fast:
 .PHONY : db_log_iter_test/fast
 
 #=============================================================================
+# Target rules for targets named write_batch_with_index_test
+
+# Build rule for target.
+write_batch_with_index_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 write_batch_with_index_test
+.PHONY : write_batch_with_index_test
+
+# fast build rule for target.
+write_batch_with_index_test/fast:
+	$(MAKE) -f CMakeFiles/write_batch_with_index_test.dir/build.make CMakeFiles/write_batch_with_index_test.dir/build
+.PHONY : write_batch_with_index_test/fast
+
+#=============================================================================
+# Target rules for targets named arena_test
+
+# Build rule for target.
+arena_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arena_test
+.PHONY : arena_test
+
+# fast build rule for target.
+arena_test/fast:
+	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/build
+.PHONY : arena_test/fast
+
+#=============================================================================
+# Target rules for targets named version_set_test
+
+# Build rule for target.
+version_set_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 version_set_test
+.PHONY : version_set_test
+
+# fast build rule for target.
+version_set_test/fast:
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/build
+.PHONY : version_set_test/fast
+
+#=============================================================================
 # Target rules for targets named db_iter_test
 
 # Build rule for target.
@@ -658,6 +632,45 @@ db_dynamic_level_test: cmake_check_build_system
 db_dynamic_level_test/fast:
 	$(MAKE) -f CMakeFiles/db_dynamic_level_test.dir/build.make CMakeFiles/db_dynamic_level_test.dir/build
 .PHONY : db_dynamic_level_test/fast
+
+#=============================================================================
+# Target rules for targets named spatial_db_test
+
+# Build rule for target.
+spatial_db_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 spatial_db_test
+.PHONY : spatial_db_test
+
+# fast build rule for target.
+spatial_db_test/fast:
+	$(MAKE) -f CMakeFiles/spatial_db_test.dir/build.make CMakeFiles/spatial_db_test.dir/build
+.PHONY : spatial_db_test/fast
+
+#=============================================================================
+# Target rules for targets named auto_roll_logger_test
+
+# Build rule for target.
+auto_roll_logger_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 auto_roll_logger_test
+.PHONY : auto_roll_logger_test
+
+# fast build rule for target.
+auto_roll_logger_test/fast:
+	$(MAKE) -f CMakeFiles/auto_roll_logger_test.dir/build.make CMakeFiles/auto_roll_logger_test.dir/build
+.PHONY : auto_roll_logger_test/fast
+
+#=============================================================================
+# Target rules for targets named oc_test
+
+# Build rule for target.
+oc_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oc_test
+.PHONY : oc_test
+
+# fast build rule for target.
+oc_test/fast:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/build
+.PHONY : oc_test/fast
 
 #=============================================================================
 # Target rules for targets named env_basic_test
@@ -749,6 +762,97 @@ dbformat_test: cmake_check_build_system
 dbformat_test/fast:
 	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/build
 .PHONY : dbformat_test/fast
+
+#=============================================================================
+# Target rules for targets named cuckoo_table_db_test
+
+# Build rule for target.
+cuckoo_table_db_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cuckoo_table_db_test
+.PHONY : cuckoo_table_db_test
+
+# fast build rule for target.
+cuckoo_table_db_test/fast:
+	$(MAKE) -f CMakeFiles/cuckoo_table_db_test.dir/build.make CMakeFiles/cuckoo_table_db_test.dir/build
+.PHONY : cuckoo_table_db_test/fast
+
+#=============================================================================
+# Target rules for targets named db_tailing_iter_test
+
+# Build rule for target.
+db_tailing_iter_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_tailing_iter_test
+.PHONY : db_tailing_iter_test
+
+# fast build rule for target.
+db_tailing_iter_test/fast:
+	$(MAKE) -f CMakeFiles/db_tailing_iter_test.dir/build.make CMakeFiles/db_tailing_iter_test.dir/build
+.PHONY : db_tailing_iter_test/fast
+
+#=============================================================================
+# Target rules for targets named bloom_test
+
+# Build rule for target.
+bloom_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bloom_test
+.PHONY : bloom_test
+
+# fast build rule for target.
+bloom_test/fast:
+	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/build
+.PHONY : bloom_test/fast
+
+#=============================================================================
+# Target rules for targets named db_wal_test
+
+# Build rule for target.
+db_wal_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_wal_test
+.PHONY : db_wal_test
+
+# fast build rule for target.
+db_wal_test/fast:
+	$(MAKE) -f CMakeFiles/db_wal_test.dir/build.make CMakeFiles/db_wal_test.dir/build
+.PHONY : db_wal_test/fast
+
+#=============================================================================
+# Target rules for targets named comparator_db_test
+
+# Build rule for target.
+comparator_db_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 comparator_db_test
+.PHONY : comparator_db_test
+
+# fast build rule for target.
+comparator_db_test/fast:
+	$(MAKE) -f CMakeFiles/comparator_db_test.dir/build.make CMakeFiles/comparator_db_test.dir/build
+.PHONY : comparator_db_test/fast
+
+#=============================================================================
+# Target rules for targets named compaction_iterator_test
+
+# Build rule for target.
+compaction_iterator_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compaction_iterator_test
+.PHONY : compaction_iterator_test
+
+# fast build rule for target.
+compaction_iterator_test/fast:
+	$(MAKE) -f CMakeFiles/compaction_iterator_test.dir/build.make CMakeFiles/compaction_iterator_test.dir/build
+.PHONY : compaction_iterator_test/fast
+
+#=============================================================================
+# Target rules for targets named build_version
+
+# Build rule for target.
+build_version: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 build_version
+.PHONY : build_version
+
+# fast build rule for target.
+build_version/fast:
+	$(MAKE) -f CMakeFiles/build_version.dir/build.make CMakeFiles/build_version.dir/build
+.PHONY : build_version/fast
 
 #=============================================================================
 # Target rules for targets named dynamic_bloom_test
@@ -855,30 +959,82 @@ rocksdb-shared/fast:
 .PHONY : rocksdb-shared/fast
 
 #=============================================================================
-# Target rules for targets named compaction_iterator_test
+# Target rules for targets named corruption_test
 
 # Build rule for target.
-compaction_iterator_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 compaction_iterator_test
-.PHONY : compaction_iterator_test
+corruption_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 corruption_test
+.PHONY : corruption_test
 
 # fast build rule for target.
-compaction_iterator_test/fast:
-	$(MAKE) -f CMakeFiles/compaction_iterator_test.dir/build.make CMakeFiles/compaction_iterator_test.dir/build
-.PHONY : compaction_iterator_test/fast
+corruption_test/fast:
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
+.PHONY : corruption_test/fast
 
 #=============================================================================
-# Target rules for targets named build_version
+# Target rules for targets named options_file_test
 
 # Build rule for target.
-build_version: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 build_version
-.PHONY : build_version
+options_file_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 options_file_test
+.PHONY : options_file_test
 
 # fast build rule for target.
-build_version/fast:
-	$(MAKE) -f CMakeFiles/build_version.dir/build.make CMakeFiles/build_version.dir/build
-.PHONY : build_version/fast
+options_file_test/fast:
+	$(MAKE) -f CMakeFiles/options_file_test.dir/build.make CMakeFiles/options_file_test.dir/build
+.PHONY : options_file_test/fast
+
+#=============================================================================
+# Target rules for targets named memtablerep_bench
+
+# Build rule for target.
+memtablerep_bench: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 memtablerep_bench
+.PHONY : memtablerep_bench
+
+# fast build rule for target.
+memtablerep_bench/fast:
+	$(MAKE) -f CMakeFiles/memtablerep_bench.dir/build.make CMakeFiles/memtablerep_bench.dir/build
+.PHONY : memtablerep_bench/fast
+
+#=============================================================================
+# Target rules for targets named compact_files_test
+
+# Build rule for target.
+compact_files_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compact_files_test
+.PHONY : compact_files_test
+
+# fast build rule for target.
+compact_files_test/fast:
+	$(MAKE) -f CMakeFiles/compact_files_test.dir/build.make CMakeFiles/compact_files_test.dir/build
+.PHONY : compact_files_test/fast
+
+#=============================================================================
+# Target rules for targets named db_test
+
+# Build rule for target.
+db_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_test
+.PHONY : db_test
+
+# fast build rule for target.
+db_test/fast:
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/build
+.PHONY : db_test/fast
+
+#=============================================================================
+# Target rules for targets named prefix_test
+
+# Build rule for target.
+prefix_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prefix_test
+.PHONY : prefix_test
+
+# fast build rule for target.
+prefix_test/fast:
+	$(MAKE) -f CMakeFiles/prefix_test.dir/build.make CMakeFiles/prefix_test.dir/build
+.PHONY : prefix_test/fast
 
 #=============================================================================
 # Target rules for targets named db_table_properties_test
@@ -933,19 +1089,6 @@ table_properties_collector_test/fast:
 .PHONY : table_properties_collector_test/fast
 
 #=============================================================================
-# Target rules for targets named db_universal_compaction_test
-
-# Build rule for target.
-db_universal_compaction_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_universal_compaction_test
-.PHONY : db_universal_compaction_test
-
-# fast build rule for target.
-db_universal_compaction_test/fast:
-	$(MAKE) -f CMakeFiles/db_universal_compaction_test.dir/build.make CMakeFiles/db_universal_compaction_test.dir/build
-.PHONY : db_universal_compaction_test/fast
-
-#=============================================================================
 # Target rules for targets named persistent_cache_test
 
 # Build rule for target.
@@ -983,6 +1126,19 @@ db_merge_operator_test: cmake_check_build_system
 db_merge_operator_test/fast:
 	$(MAKE) -f CMakeFiles/db_merge_operator_test.dir/build.make CMakeFiles/db_merge_operator_test.dir/build
 .PHONY : db_merge_operator_test/fast
+
+#=============================================================================
+# Target rules for targets named db_universal_compaction_test
+
+# Build rule for target.
+db_universal_compaction_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_universal_compaction_test
+.PHONY : db_universal_compaction_test
+
+# fast build rule for target.
+db_universal_compaction_test/fast:
+	$(MAKE) -f CMakeFiles/db_universal_compaction_test.dir/build.make CMakeFiles/db_universal_compaction_test.dir/build
+.PHONY : db_universal_compaction_test/fast
 
 #=============================================================================
 # Target rules for targets named testharness
@@ -1037,45 +1193,6 @@ db_properties_test/fast:
 .PHONY : db_properties_test/fast
 
 #=============================================================================
-# Target rules for targets named memtablerep_bench
-
-# Build rule for target.
-memtablerep_bench: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 memtablerep_bench
-.PHONY : memtablerep_bench
-
-# fast build rule for target.
-memtablerep_bench/fast:
-	$(MAKE) -f CMakeFiles/memtablerep_bench.dir/build.make CMakeFiles/memtablerep_bench.dir/build
-.PHONY : memtablerep_bench/fast
-
-#=============================================================================
-# Target rules for targets named corruption_test
-
-# Build rule for target.
-corruption_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 corruption_test
-.PHONY : corruption_test
-
-# fast build rule for target.
-corruption_test/fast:
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
-.PHONY : corruption_test/fast
-
-#=============================================================================
-# Target rules for targets named options_file_test
-
-# Build rule for target.
-options_file_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 options_file_test
-.PHONY : options_file_test
-
-# fast build rule for target.
-options_file_test/fast:
-	$(MAKE) -f CMakeFiles/options_file_test.dir/build.make CMakeFiles/options_file_test.dir/build
-.PHONY : options_file_test/fast
-
-#=============================================================================
 # Target rules for targets named column_aware_encoding_exp
 
 # Build rule for target.
@@ -1113,6 +1230,32 @@ options_settable_test: cmake_check_build_system
 options_settable_test/fast:
 	$(MAKE) -f CMakeFiles/options_settable_test.dir/build.make CMakeFiles/options_settable_test.dir/build
 .PHONY : options_settable_test/fast
+
+#=============================================================================
+# Target rules for targets named event_logger_test
+
+# Build rule for target.
+event_logger_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 event_logger_test
+.PHONY : event_logger_test
+
+# fast build rule for target.
+event_logger_test/fast:
+	$(MAKE) -f CMakeFiles/event_logger_test.dir/build.make CMakeFiles/event_logger_test.dir/build
+.PHONY : event_logger_test/fast
+
+#=============================================================================
+# Target rules for targets named tree_test
+
+# Build rule for target.
+tree_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tree_test
+.PHONY : tree_test
+
+# fast build rule for target.
+tree_test/fast:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/build
+.PHONY : tree_test/fast
 
 #=============================================================================
 # Target rules for targets named testutillib
@@ -1193,108 +1336,30 @@ lru_cache_test/fast:
 .PHONY : lru_cache_test/fast
 
 #=============================================================================
-# Target rules for targets named spatial_db_test
+# Target rules for targets named db_test2
 
 # Build rule for target.
-spatial_db_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 spatial_db_test
-.PHONY : spatial_db_test
+db_test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_test2
+.PHONY : db_test2
 
 # fast build rule for target.
-spatial_db_test/fast:
-	$(MAKE) -f CMakeFiles/spatial_db_test.dir/build.make CMakeFiles/spatial_db_test.dir/build
-.PHONY : spatial_db_test/fast
+db_test2/fast:
+	$(MAKE) -f CMakeFiles/db_test2.dir/build.make CMakeFiles/db_test2.dir/build
+.PHONY : db_test2/fast
 
 #=============================================================================
-# Target rules for targets named auto_roll_logger_test
+# Target rules for targets named merge_helper_test
 
 # Build rule for target.
-auto_roll_logger_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 auto_roll_logger_test
-.PHONY : auto_roll_logger_test
+merge_helper_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 merge_helper_test
+.PHONY : merge_helper_test
 
 # fast build rule for target.
-auto_roll_logger_test/fast:
-	$(MAKE) -f CMakeFiles/auto_roll_logger_test.dir/build.make CMakeFiles/auto_roll_logger_test.dir/build
-.PHONY : auto_roll_logger_test/fast
-
-#=============================================================================
-# Target rules for targets named cuckoo_table_db_test
-
-# Build rule for target.
-cuckoo_table_db_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cuckoo_table_db_test
-.PHONY : cuckoo_table_db_test
-
-# fast build rule for target.
-cuckoo_table_db_test/fast:
-	$(MAKE) -f CMakeFiles/cuckoo_table_db_test.dir/build.make CMakeFiles/cuckoo_table_db_test.dir/build
-.PHONY : cuckoo_table_db_test/fast
-
-#=============================================================================
-# Target rules for targets named db_tailing_iter_test
-
-# Build rule for target.
-db_tailing_iter_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_tailing_iter_test
-.PHONY : db_tailing_iter_test
-
-# fast build rule for target.
-db_tailing_iter_test/fast:
-	$(MAKE) -f CMakeFiles/db_tailing_iter_test.dir/build.make CMakeFiles/db_tailing_iter_test.dir/build
-.PHONY : db_tailing_iter_test/fast
-
-#=============================================================================
-# Target rules for targets named bloom_test
-
-# Build rule for target.
-bloom_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bloom_test
-.PHONY : bloom_test
-
-# fast build rule for target.
-bloom_test/fast:
-	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/build
-.PHONY : bloom_test/fast
-
-#=============================================================================
-# Target rules for targets named db_wal_test
-
-# Build rule for target.
-db_wal_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_wal_test
-.PHONY : db_wal_test
-
-# fast build rule for target.
-db_wal_test/fast:
-	$(MAKE) -f CMakeFiles/db_wal_test.dir/build.make CMakeFiles/db_wal_test.dir/build
-.PHONY : db_wal_test/fast
-
-#=============================================================================
-# Target rules for targets named comparator_db_test
-
-# Build rule for target.
-comparator_db_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 comparator_db_test
-.PHONY : comparator_db_test
-
-# fast build rule for target.
-comparator_db_test/fast:
-	$(MAKE) -f CMakeFiles/comparator_db_test.dir/build.make CMakeFiles/comparator_db_test.dir/build
-.PHONY : comparator_db_test/fast
-
-#=============================================================================
-# Target rules for targets named db_bench
-
-# Build rule for target.
-db_bench: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_bench
-.PHONY : db_bench
-
-# fast build rule for target.
-db_bench/fast:
-	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/build
-.PHONY : db_bench/fast
+merge_helper_test/fast:
+	$(MAKE) -f CMakeFiles/merge_helper_test.dir/build.make CMakeFiles/merge_helper_test.dir/build
+.PHONY : merge_helper_test/fast
 
 #=============================================================================
 # Target rules for targets named compaction_picker_test
@@ -1308,6 +1373,19 @@ compaction_picker_test: cmake_check_build_system
 compaction_picker_test/fast:
 	$(MAKE) -f CMakeFiles/compaction_picker_test.dir/build.make CMakeFiles/compaction_picker_test.dir/build
 .PHONY : compaction_picker_test/fast
+
+#=============================================================================
+# Target rules for targets named db_bench
+
+# Build rule for target.
+db_bench: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_bench
+.PHONY : db_bench
+
+# fast build rule for target.
+db_bench/fast:
+	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/build
+.PHONY : db_bench/fast
 
 #=============================================================================
 # Target rules for targets named deletefile_test
@@ -1347,19 +1425,6 @@ fault_injection_test: cmake_check_build_system
 fault_injection_test/fast:
 	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/build
 .PHONY : fault_injection_test/fast
-
-#=============================================================================
-# Target rules for targets named sst_dump_test
-
-# Build rule for target.
-sst_dump_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sst_dump_test
-.PHONY : sst_dump_test
-
-# fast build rule for target.
-sst_dump_test/fast:
-	$(MAKE) -f CMakeFiles/sst_dump_test.dir/build.make CMakeFiles/sst_dump_test.dir/build
-.PHONY : sst_dump_test/fast
 
 #=============================================================================
 # Target rules for targets named file_indexer_test
@@ -1466,19 +1531,6 @@ listener_test/fast:
 .PHONY : listener_test/fast
 
 #=============================================================================
-# Target rules for targets named compaction_job_test
-
-# Build rule for target.
-compaction_job_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 compaction_job_test
-.PHONY : compaction_job_test
-
-# fast build rule for target.
-compaction_job_test/fast:
-	$(MAKE) -f CMakeFiles/compaction_job_test.dir/build.make CMakeFiles/compaction_job_test.dir/build
-.PHONY : compaction_job_test/fast
-
-#=============================================================================
 # Target rules for targets named db_io_failure_test
 
 # Build rule for target.
@@ -1490,6 +1542,19 @@ db_io_failure_test: cmake_check_build_system
 db_io_failure_test/fast:
 	$(MAKE) -f CMakeFiles/db_io_failure_test.dir/build.make CMakeFiles/db_io_failure_test.dir/build
 .PHONY : db_io_failure_test/fast
+
+#=============================================================================
+# Target rules for targets named compaction_job_test
+
+# Build rule for target.
+compaction_job_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compaction_job_test
+.PHONY : compaction_job_test
+
+# fast build rule for target.
+compaction_job_test/fast:
+	$(MAKE) -f CMakeFiles/compaction_job_test.dir/build.make CMakeFiles/compaction_job_test.dir/build
+.PHONY : compaction_job_test/fast
 
 #=============================================================================
 # Target rules for targets named manual_compaction_test
@@ -1765,6 +1830,19 @@ statistics_test/fast:
 .PHONY : statistics_test/fast
 
 #=============================================================================
+# Target rules for targets named oc_page_test
+
+# Build rule for target.
+oc_page_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oc_page_test
+.PHONY : oc_page_test
+
+# fast build rule for target.
+oc_page_test/fast:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/build
+.PHONY : oc_page_test/fast
+
+#=============================================================================
 # Target rules for targets named block_test
 
 # Build rule for target.
@@ -1867,45 +1945,6 @@ full_filter_block_test: cmake_check_build_system
 full_filter_block_test/fast:
 	$(MAKE) -f CMakeFiles/full_filter_block_test.dir/build.make CMakeFiles/full_filter_block_test.dir/build
 .PHONY : full_filter_block_test/fast
-
-#=============================================================================
-# Target rules for targets named write_batch_with_index_test
-
-# Build rule for target.
-write_batch_with_index_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 write_batch_with_index_test
-.PHONY : write_batch_with_index_test
-
-# fast build rule for target.
-write_batch_with_index_test/fast:
-	$(MAKE) -f CMakeFiles/write_batch_with_index_test.dir/build.make CMakeFiles/write_batch_with_index_test.dir/build
-.PHONY : write_batch_with_index_test/fast
-
-#=============================================================================
-# Target rules for targets named version_set_test
-
-# Build rule for target.
-version_set_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 version_set_test
-.PHONY : version_set_test
-
-# fast build rule for target.
-version_set_test/fast:
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/build
-.PHONY : version_set_test/fast
-
-#=============================================================================
-# Target rules for targets named arena_test
-
-# Build rule for target.
-arena_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arena_test
-.PHONY : arena_test
-
-# fast build rule for target.
-arena_test/fast:
-	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/build
-.PHONY : arena_test/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -2398,6 +2437,33 @@ db/OCSSD/Rocksdb/oc_page_cache.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/oc_page_cache.cc.s
 .PHONY : db/OCSSD/Rocksdb/oc_page_cache.cc.s
 
+db/OCSSD/Rocksdb/oc_page_test.o: db/OCSSD/Rocksdb/oc_page_test.cc.o
+
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/oc_page_test.cc.o:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.o
+
+db/OCSSD/Rocksdb/oc_page_test.i: db/OCSSD/Rocksdb/oc_page_test.cc.i
+
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/oc_page_test.cc.i:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.i
+
+db/OCSSD/Rocksdb/oc_page_test.s: db/OCSSD/Rocksdb/oc_page_test.cc.s
+
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/oc_page_test.cc.s:
+	$(MAKE) -f CMakeFiles/oc_page_test.dir/build.make CMakeFiles/oc_page_test.dir/db/OCSSD/Rocksdb/oc_page_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_page_test.cc.s
+
 db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o: db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.cc.o
 
 .PHONY : db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o
@@ -2487,6 +2553,210 @@ db/OCSSD/Rocksdb/oc_ssd.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/oc_ssd.cc.s
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/oc_ssd.cc.s
 .PHONY : db/OCSSD/Rocksdb/oc_ssd.cc.s
+
+db/OCSSD/Rocksdb/oc_test.o: db/OCSSD/Rocksdb/oc_test.cc.o
+
+.PHONY : db/OCSSD/Rocksdb/oc_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/oc_test.cc.o:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.o
+
+db/OCSSD/Rocksdb/oc_test.i: db/OCSSD/Rocksdb/oc_test.cc.i
+
+.PHONY : db/OCSSD/Rocksdb/oc_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/oc_test.cc.i:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.i
+
+db/OCSSD/Rocksdb/oc_test.s: db/OCSSD/Rocksdb/oc_test.cc.s
+
+.PHONY : db/OCSSD/Rocksdb/oc_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/oc_test.cc.s:
+	$(MAKE) -f CMakeFiles/oc_test.dir/build.make CMakeFiles/oc_test.dir/db/OCSSD/Rocksdb/oc_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/oc_test.cc.s
+
+db/OCSSD/Rocksdb/utils/bitmap_test.o: db/OCSSD/Rocksdb/utils/bitmap_test.cpp.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/bitmap_test.cpp.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.o
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.cpp.o
+
+db/OCSSD/Rocksdb/utils/bitmap_test.i: db/OCSSD/Rocksdb/utils/bitmap_test.cpp.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/bitmap_test.cpp.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.i
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.cpp.i
+
+db/OCSSD/Rocksdb/utils/bitmap_test.s: db/OCSSD/Rocksdb/utils/bitmap_test.cpp.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/bitmap_test.cpp.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/bitmap_test.cpp.s
+.PHONY : db/OCSSD/Rocksdb/utils/bitmap_test.cpp.s
+
+db/OCSSD/Rocksdb/utils/common.o: db/OCSSD/Rocksdb/utils/common.cc.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/common.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/common.cc.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/common.cc.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/common.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/common.cc.o
+
+db/OCSSD/Rocksdb/utils/common.i: db/OCSSD/Rocksdb/utils/common.cc.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/common.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/common.cc.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/common.cc.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/common.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/common.cc.i
+
+db/OCSSD/Rocksdb/utils/common.s: db/OCSSD/Rocksdb/utils/common.cc.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/common.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/common.cc.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/common.cc.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/common.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/common.cc.s
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.o: db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.o
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.o
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.i: db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.i
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.i
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.s: db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.s
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap.cpp.s
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.o: db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.o
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.o
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.i: db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.i
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.i
+
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.s: db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.s
+.PHONY : db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.cpp.s
+
+db/OCSSD/Rocksdb/utils/oc_tree.o: db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.o
+
+db/OCSSD/Rocksdb/utils/oc_tree.i: db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.i
+
+db/OCSSD/Rocksdb/utils/oc_tree.s: db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/oc_tree.cc.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/oc_tree.cc.s
+
+db/OCSSD/Rocksdb/utils/tree_test.o: db/OCSSD/Rocksdb/utils/tree_test.cc.o
+
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.o
+
+# target to build an object file
+db/OCSSD/Rocksdb/utils/tree_test.cc.o:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.o
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.o
+
+db/OCSSD/Rocksdb/utils/tree_test.i: db/OCSSD/Rocksdb/utils/tree_test.cc.i
+
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.i
+
+# target to preprocess a source file
+db/OCSSD/Rocksdb/utils/tree_test.cc.i:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.i
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.i
+
+db/OCSSD/Rocksdb/utils/tree_test.s: db/OCSSD/Rocksdb/utils/tree_test.cc.s
+
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.s
+
+# target to generate assembly for a file
+db/OCSSD/Rocksdb/utils/tree_test.cc.s:
+	$(MAKE) -f CMakeFiles/tree_test.dir/build.make CMakeFiles/tree_test.dir/db/OCSSD/Rocksdb/utils/tree_test.cc.s
+.PHONY : db/OCSSD/Rocksdb/utils/tree_test.cc.s
 
 db/builder.o: db/builder.cc.o
 
@@ -5809,35 +6079,35 @@ env/env_hdfs.cc.s:
 	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_hdfs.cc.s
 .PHONY : env/env_hdfs.cc.s
 
-env/env_posix.o: env/env_posix.cc.o
+env/env_posix_ocssd.o: env/env_posix_ocssd.cc.o
 
-.PHONY : env/env_posix.o
+.PHONY : env/env_posix_ocssd.o
 
 # target to build an object file
-env/env_posix.cc.o:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix.cc.o
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix.cc.o
-.PHONY : env/env_posix.cc.o
+env/env_posix_ocssd.cc.o:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix_ocssd.cc.o
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix_ocssd.cc.o
+.PHONY : env/env_posix_ocssd.cc.o
 
-env/env_posix.i: env/env_posix.cc.i
+env/env_posix_ocssd.i: env/env_posix_ocssd.cc.i
 
-.PHONY : env/env_posix.i
+.PHONY : env/env_posix_ocssd.i
 
 # target to preprocess a source file
-env/env_posix.cc.i:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix.cc.i
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix.cc.i
-.PHONY : env/env_posix.cc.i
+env/env_posix_ocssd.cc.i:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix_ocssd.cc.i
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix_ocssd.cc.i
+.PHONY : env/env_posix_ocssd.cc.i
 
-env/env_posix.s: env/env_posix.cc.s
+env/env_posix_ocssd.s: env/env_posix_ocssd.cc.s
 
-.PHONY : env/env_posix.s
+.PHONY : env/env_posix_ocssd.s
 
 # target to generate assembly for a file
-env/env_posix.cc.s:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix.cc.s
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix.cc.s
-.PHONY : env/env_posix.cc.s
+env/env_posix_ocssd.cc.s:
+	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/env/env_posix_ocssd.cc.s
+	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/env/env_posix_ocssd.cc.s
+.PHONY : env/env_posix_ocssd.cc.s
 
 env/env_test.o: env/env_test.cc.o
 
@@ -7089,36 +7359,6 @@ table/block_based_filter_block_test.s: table/block_based_filter_block_test.cc.s
 table/block_based_filter_block_test.cc.s:
 	$(MAKE) -f CMakeFiles/block_based_filter_block_test.dir/build.make CMakeFiles/block_based_filter_block_test.dir/table/block_based_filter_block_test.cc.s
 .PHONY : table/block_based_filter_block_test.cc.s
-
-table/block_based_table_builder.o: table/block_based_table_builder.cc.o
-
-.PHONY : table/block_based_table_builder.o
-
-# target to build an object file
-table/block_based_table_builder.cc.o:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/table/block_based_table_builder.cc.o
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/table/block_based_table_builder.cc.o
-.PHONY : table/block_based_table_builder.cc.o
-
-table/block_based_table_builder.i: table/block_based_table_builder.cc.i
-
-.PHONY : table/block_based_table_builder.i
-
-# target to preprocess a source file
-table/block_based_table_builder.cc.i:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/table/block_based_table_builder.cc.i
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/table/block_based_table_builder.cc.i
-.PHONY : table/block_based_table_builder.cc.i
-
-table/block_based_table_builder.s: table/block_based_table_builder.cc.s
-
-.PHONY : table/block_based_table_builder.s
-
-# target to generate assembly for a file
-table/block_based_table_builder.cc.s:
-	$(MAKE) -f CMakeFiles/rocksdb.dir/build.make CMakeFiles/rocksdb.dir/table/block_based_table_builder.cc.s
-	$(MAKE) -f CMakeFiles/rocksdb-shared.dir/build.make CMakeFiles/rocksdb-shared.dir/table/block_based_table_builder.cc.s
-.PHONY : table/block_based_table_builder.cc.s
 
 table/block_based_table_factory.o: table/block_based_table_factory.cc.o
 
@@ -11817,25 +12057,26 @@ help:
 	@echo "... blob_db_test"
 	@echo "... filelock_test"
 	@echo "... file_reader_writer_test"
-	@echo "... event_logger_test"
 	@echo "... options_util_test"
 	@echo "... crc32c_test"
 	@echo "... coding_test"
-	@echo "... db_test2"
-	@echo "... merge_helper_test"
-	@echo "... db_test"
-	@echo "... compact_files_test"
-	@echo "... prefix_test"
+	@echo "... sst_dump_test"
 	@echo "... db_sst_test"
 	@echo "... db_bloom_filter_test"
 	@echo "... thread_list_test"
 	@echo "... log_test"
 	@echo "... list_install_components"
 	@echo "... db_log_iter_test"
+	@echo "... write_batch_with_index_test"
+	@echo "... arena_test"
+	@echo "... version_set_test"
 	@echo "... db_iter_test"
 	@echo "... db_inplace_update_test"
 	@echo "... db_flush_test"
 	@echo "... db_dynamic_level_test"
+	@echo "... spatial_db_test"
+	@echo "... auto_roll_logger_test"
+	@echo "... oc_test"
 	@echo "... env_basic_test"
 	@echo "... db_memtable_test"
 	@echo "... db_compaction_filter_test"
@@ -11843,6 +12084,13 @@ help:
 	@echo "... stringappend_test"
 	@echo "... autovector_test"
 	@echo "... dbformat_test"
+	@echo "... cuckoo_table_db_test"
+	@echo "... db_tailing_iter_test"
+	@echo "... bloom_test"
+	@echo "... db_wal_test"
+	@echo "... comparator_db_test"
+	@echo "... compaction_iterator_test"
+	@echo "... build_version"
 	@echo "... dynamic_bloom_test"
 	@echo "... hash_table_bench"
 	@echo "... rocksdb"
@@ -11851,45 +12099,42 @@ help:
 	@echo "... table_reader_bench"
 	@echo "... thread_local_test"
 	@echo "... rocksdb-shared"
-	@echo "... compaction_iterator_test"
-	@echo "... build_version"
+	@echo "... corruption_test"
+	@echo "... options_file_test"
+	@echo "... memtablerep_bench"
+	@echo "... compact_files_test"
+	@echo "... db_test"
+	@echo "... prefix_test"
 	@echo "... db_table_properties_test"
 	@echo "... compaction_job_stats_test"
 	@echo "... cache_bench"
 	@echo "... table_properties_collector_test"
-	@echo "... db_universal_compaction_test"
 	@echo "... persistent_cache_test"
 	@echo "... db_basic_test"
 	@echo "... db_merge_operator_test"
+	@echo "... db_universal_compaction_test"
 	@echo "... testharness"
 	@echo "... delete_scheduler_test"
 	@echo "... db_range_del_test"
 	@echo "... db_properties_test"
-	@echo "... memtablerep_bench"
-	@echo "... corruption_test"
-	@echo "... options_file_test"
 	@echo "... column_aware_encoding_exp"
 	@echo "... db_block_cache_test"
 	@echo "... options_settable_test"
+	@echo "... event_logger_test"
+	@echo "... tree_test"
 	@echo "... testutillib"
 	@echo "... db_options_test"
 	@echo "... ldb_cmd_test"
 	@echo "... column_family_test"
 	@echo "... rate_limiter_test"
 	@echo "... lru_cache_test"
-	@echo "... spatial_db_test"
-	@echo "... auto_roll_logger_test"
-	@echo "... cuckoo_table_db_test"
-	@echo "... db_tailing_iter_test"
-	@echo "... bloom_test"
-	@echo "... db_wal_test"
-	@echo "... comparator_db_test"
-	@echo "... db_bench"
+	@echo "... db_test2"
+	@echo "... merge_helper_test"
 	@echo "... compaction_picker_test"
+	@echo "... db_bench"
 	@echo "... deletefile_test"
 	@echo "... external_sst_file_basic_test"
 	@echo "... fault_injection_test"
-	@echo "... sst_dump_test"
 	@echo "... file_indexer_test"
 	@echo "... hash_table_test"
 	@echo "... filename_test"
@@ -11898,8 +12143,8 @@ help:
 	@echo "... flush_job_test"
 	@echo "... db_compaction_test"
 	@echo "... listener_test"
-	@echo "... compaction_job_test"
 	@echo "... db_io_failure_test"
+	@echo "... compaction_job_test"
 	@echo "... manual_compaction_test"
 	@echo "... memtable_list_test"
 	@echo "... perf_context_test"
@@ -11921,6 +12166,7 @@ help:
 	@echo "... iostats_context_test"
 	@echo "... reduce_levels_test"
 	@echo "... statistics_test"
+	@echo "... oc_page_test"
 	@echo "... block_test"
 	@echo "... options_test"
 	@echo "... merger_test"
@@ -11929,9 +12175,6 @@ help:
 	@echo "... cuckoo_table_reader_test"
 	@echo "... merge_test"
 	@echo "... full_filter_block_test"
-	@echo "... write_batch_with_index_test"
-	@echo "... version_set_test"
-	@echo "... arena_test"
 	@echo "... gtest"
 	@echo "... sst_dump"
 	@echo "... db_stress"
@@ -11979,6 +12222,9 @@ help:
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.o"
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.i"
 	@echo "... db/OCSSD/Rocksdb/oc_page_cache.s"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.o"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.i"
+	@echo "... db/OCSSD/Rocksdb/oc_page_test.s"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.o"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.i"
 	@echo "... db/OCSSD/Rocksdb/oc_rocksdb_block_based_table_builder.s"
@@ -11988,6 +12234,27 @@ help:
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.o"
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.i"
 	@echo "... db/OCSSD/Rocksdb/oc_ssd.s"
+	@echo "... db/OCSSD/Rocksdb/oc_test.o"
+	@echo "... db/OCSSD/Rocksdb/oc_test.i"
+	@echo "... db/OCSSD/Rocksdb/oc_test.s"
+	@echo "... db/OCSSD/Rocksdb/utils/bitmap_test.o"
+	@echo "... db/OCSSD/Rocksdb/utils/bitmap_test.i"
+	@echo "... db/OCSSD/Rocksdb/utils/bitmap_test.s"
+	@echo "... db/OCSSD/Rocksdb/utils/common.o"
+	@echo "... db/OCSSD/Rocksdb/utils/common.i"
+	@echo "... db/OCSSD/Rocksdb/utils/common.s"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap.o"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap.i"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap.s"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.o"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.i"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_block_bitmap_manager.s"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.o"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.i"
+	@echo "... db/OCSSD/Rocksdb/utils/oc_tree.s"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.o"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.i"
+	@echo "... db/OCSSD/Rocksdb/utils/tree_test.s"
 	@echo "... db/builder.o"
 	@echo "... db/builder.i"
 	@echo "... db/builder.s"
@@ -12339,9 +12606,9 @@ help:
 	@echo "... env/env_hdfs.o"
 	@echo "... env/env_hdfs.i"
 	@echo "... env/env_hdfs.s"
-	@echo "... env/env_posix.o"
-	@echo "... env/env_posix.i"
-	@echo "... env/env_posix.s"
+	@echo "... env/env_posix_ocssd.o"
+	@echo "... env/env_posix_ocssd.i"
+	@echo "... env/env_posix_ocssd.s"
 	@echo "... env/env_test.o"
 	@echo "... env/env_test.i"
 	@echo "... env/env_test.s"
@@ -12471,9 +12738,6 @@ help:
 	@echo "... table/block_based_filter_block_test.o"
 	@echo "... table/block_based_filter_block_test.i"
 	@echo "... table/block_based_filter_block_test.s"
-	@echo "... table/block_based_table_builder.o"
-	@echo "... table/block_based_table_builder.i"
-	@echo "... table/block_based_table_builder.s"
 	@echo "... table/block_based_table_factory.o"
 	@echo "... table/block_based_table_factory.i"
 	@echo "... table/block_based_table_factory.s"
